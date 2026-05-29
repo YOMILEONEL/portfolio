@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const experiences = [
   {
     role: "Werkstudent Softwareentwicklung",
-    company: "Mariana Cannabis",
+    company: "Mariana Service GmbH",
     period: "Dezember 2025 – heute",
     type: "Fullstack · E-Commerce · Automatisierung",
     description:

@@ -16,6 +16,7 @@ const experiences = [
       "Implementierung von Produktverwaltung, Kassensystemen und Admin-Dashboards",
       "Integration externer Dienste wie Stripe, AWS S3/Supabase Storage, Resend und RabbitMQ",
       "Deployment auf VPS mit Docker, nginx und HTTPS-Konfiguration über Let’s Encrypt",
+      "Aufbau einer CI/CD-Pipeline mit GitHub Actions für automatisierte Tests, Builds und Docker-basiertes Deployment",
       "Automatisierung von Support-Prozessen mit n8n, OpenAI API, REST APIs und Webhooks",
     ],
     technologies: [
@@ -29,6 +30,7 @@ const experiences = [
       "RabbitMQ",
       "OpenAI API",
       "n8n",
+      "GitHub Actions",
     ],
   },
   {

@@ -4,8 +4,12 @@ import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { GrLinkedin } from "react-icons/gr";
 import { MdAttachEmail, MdLocationOn, MdSend } from "react-icons/md";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export function Contact() {
+  const { dict } = useLanguage();
+  const { contact } = dict;
+
   return (
     <section
       id="contact"
@@ -25,18 +29,15 @@ export function Contact() {
           viewport={{ once: true }}
         >
           <p className="text-sm md:text-base uppercase tracking-[0.3em] text-blue-400 font-semibold mb-3">
-            Kontakt
+            {contact.eyebrow}
           </p>
 
           <h2 className="text-4xl md:text-5xl font-extrabold mb-5">
-            Lass uns zusammenarbeiten
+            {contact.title}
           </h2>
 
           <p className="max-w-3xl mx-auto text-gray-300 text-base md:text-lg leading-relaxed">
-            Du möchtest mit mir über ein Projekt, eine Werkstudentenstelle,
-            eine Zusammenarbeit oder eine technische Idee sprechen? Schreib mir
-            gerne eine Nachricht oder kontaktiere mich direkt per E-Mail,
-            GitHub oder LinkedIn.
+            {contact.intro}
           </p>
         </motion.div>
 
@@ -51,13 +52,11 @@ export function Contact() {
           >
             <div className="rounded-3xl border border-white/10 bg-white/5 p-7 shadow-2xl backdrop-blur-sm">
               <h3 className="text-2xl font-bold mb-4">
-                Kontaktinformationen
+                {contact.contactInfoTitle}
               </h3>
 
               <p className="text-gray-300 leading-relaxed mb-6">
-                Ich bin offen für spannende Softwareprojekte, Fullstack-
-                Entwicklung, KI-gestützte Anwendungen, Automatisierungen und
-                fachlichen Austausch im Bereich Informatik.
+                {contact.contactInfoText}
               </p>
 
               <div className="space-y-4">
@@ -69,7 +68,9 @@ export function Contact() {
                     <MdAttachEmail size={24} />
                   </span>
                   <div className="text-left">
-                    <p className="text-sm text-gray-400">E-Mail</p>
+                    <p className="text-sm text-gray-400">
+                      {contact.emailLabel}
+                    </p>
                     <p className="font-semibold text-white">
                       leonelyomi3@gmail.com
                     </p>
@@ -81,9 +82,11 @@ export function Contact() {
                     <MdLocationOn size={24} />
                   </span>
                   <div className="text-left">
-                    <p className="text-sm text-gray-400">Standort</p>
+                    <p className="text-sm text-gray-400">
+                      {contact.locationLabel}
+                    </p>
                     <p className="font-semibold text-white">
-                      Clausthal-Zellerfeld, Deutschland
+                      {contact.locationValue}
                     </p>
                   </div>
                 </div>
@@ -92,7 +95,7 @@ export function Contact() {
 
             <div className="rounded-3xl border border-white/10 bg-white/5 p-7 shadow-2xl backdrop-blur-sm">
               <h3 className="text-2xl font-bold mb-4">
-                Profile
+                {contact.profilesTitle}
               </h3>
 
               <div className="grid sm:grid-cols-2 gap-4">
@@ -141,19 +144,17 @@ export function Contact() {
               const message = formData.get("message");
 
               const subject = encodeURIComponent(
-                `Kontaktanfrage von ${name}`
+                `${contact.mailSubjectPrefix} ${name}`
               );
 
               const body = encodeURIComponent(
-                `Name: ${name}\nE-Mail: ${email}\n\nNachricht:\n${message}`
+                `${contact.mailBodyNameLabel}: ${name}\n${contact.mailBodyEmailLabel}: ${email}\n\n${contact.mailBodyMessageLabel}:\n${message}`
               );
 
               window.location.href = `mailto:leonelyomi3@gmail.com?subject=${subject}&body=${body}`;
             }}
           >
-            <h3 className="text-2xl font-bold mb-6">
-              Nachricht senden
-            </h3>
+            <h3 className="text-2xl font-bold mb-6">{contact.formTitle}</h3>
 
             <div className="space-y-5">
               <div className="text-left">
@@ -161,14 +162,14 @@ export function Contact() {
                   htmlFor="name"
                   className="mb-2 block text-sm font-medium text-gray-300"
                 >
-                  Dein Name
+                  {contact.nameLabel}
                 </label>
                 <input
                   id="name"
                   name="name"
                   type="text"
                   required
-                  placeholder="Max Mustermann"
+                  placeholder={contact.namePlaceholder}
                   className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white placeholder:text-gray-500 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-500/30"
                 />
               </div>
@@ -178,14 +179,14 @@ export function Contact() {
                   htmlFor="email"
                   className="mb-2 block text-sm font-medium text-gray-300"
                 >
-                  Deine E-Mail
+                  {contact.emailFieldLabel}
                 </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
                   required
-                  placeholder="max@example.com"
+                  placeholder={contact.emailPlaceholder}
                   className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white placeholder:text-gray-500 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-500/30"
                 />
               </div>
@@ -195,13 +196,13 @@ export function Contact() {
                   htmlFor="message"
                   className="mb-2 block text-sm font-medium text-gray-300"
                 >
-                  Deine Nachricht
+                  {contact.messageLabel}
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   required
-                  placeholder="Schreib mir kurz, worum es geht..."
+                  placeholder={contact.messagePlaceholder}
                   rows={6}
                   className="w-full resize-none rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white placeholder:text-gray-500 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-500/30"
                 />
@@ -214,14 +215,11 @@ export function Contact() {
                 whileTap={{ scale: 0.98 }}
               >
                 <MdSend size={20} />
-                Nachricht vorbereiten
+                {contact.submitButton}
               </motion.button>
             </div>
 
-            <p className="mt-5 text-sm text-gray-400">
-              Beim Absenden wird dein E-Mail-Programm geöffnet und die Nachricht
-              automatisch vorbereitet.
-            </p>
+            <p className="mt-5 text-sm text-gray-400">{contact.submitNote}</p>
           </motion.form>
         </div>
       </div>

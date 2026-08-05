@@ -1,113 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const projects = [
-  {
-    title: "Wetteranwendung",
-    subtitle: "React + TypeScript",
-    icon: "🌦",
-    category: "Frontend / API",
-    description:
-      "Eine responsive Webanwendung zur Anzeige von Echtzeit-Wetterdaten auf Basis der OpenWeatherMap-API. Nutzer können Städte suchen und erhalten aktuelle Informationen zu Temperatur, Luftfeuchtigkeit, Wind und Wetterlage.",
-    features: [
-      "Stadtsuche mit dynamischer Wetteranzeige",
-      "API-Anbindung über OpenWeatherMap",
-      "Fehlerbehandlung bei ungültigen Eingaben",
-      "Responsives UI mit Wetter-Icons",
-      "Modularer Aufbau mit React Hooks",
-    ],
-    technologies: ["React", "TypeScript", "Axios", "CSS", "HTML", "Git", "React Icons"],
-    github: "https://github.com/YOMILEONEL/weather_app",
-  },
-  {
-    title: "Damespiel mit Mehrspielermodus",
-    subtitle: "Spring Boot + Swing",
-    icon: "♟",
-    category: "Fullstack / Game Development",
-    description:
-      "Ein Client-Server-Damespiel mit Spring Boot im Backend und Java Swing im Frontend. Das Projekt kombiniert Spiellogik, REST-API-Kommunikation, Datenpersistenz und Echtzeitsynchronisation.",
-    features: [
-      "REST-API für Spieler, Spielstatus und Spielzüge",
-      "Echtzeitsynchronisation über Long Polling",
-      "Spiellogik mit OOP, Algorithmen und Datenstrukturen",
-      "MVC-Struktur im Frontend",
-      "Systemkonzeption mit UML und Figma",
-    ],
-    technologies: ["Java", "Swing", "Spring Boot", "MySQL", "UML", "Figma", "Git"],
-    github: "https://github.com/YOMILEONEL/damespiel",
-  },
-  {
-    title: "RoomBookingApp",
-    subtitle: "Fullstack-Webanwendung",
-    icon: "🏢",
-    category: "Fullstack / Enterprise App",
-    description:
-      "Ein Raumbuchungssystem mit sicherer Benutzeranmeldung, rollenbasierter Autorisierung und sauberer Trennung zwischen Frontend, Backend und Datenbank.",
-    features: [
-      "Benutzer-, Raum- und Buchungsverwaltung",
-      "CRUD-Funktionalitäten über REST-API",
-      "Authentifizierung und Autorisierung mit Spring Security",
-      "React-Frontend mit Material UI",
-      "MySQL-Datenbank mit Hibernate JPA",
-    ],
-    technologies: [
-      "Java",
-      "Spring Boot",
-      "Spring Security",
-      "React",
-      "TypeScript",
-      "Material UI",
-      "MySQL",
-    ],
-    github: "https://github.com/YOMILEONEL/room_booking_system",
-  },
-  {
-    title: "LMS Risk Prediction",
-    subtitle: "Big Data & Machine Learning",
-    icon: "📊",
-    category: "Data Science / Machine Learning",
-    description:
-      "Ein Machine-Learning-Projekt zur Vorhersage von Studienerfolgsrisiken anhand umfangreicher LMS-Interaktionsdaten mit mehr als 230.000 Datensätzen.",
-    features: [
-      "Datenbereinigung und Feature Engineering",
-      "Skalierung und Modellvorbereitung",
-      "Training verschiedener ML-Modelle",
-      "Vergleich von Decision Tree, Random Forest, AdaBoost und MLP",
-      "Evaluation mit Confusion-Matrix, Accuracy, Precision und Recall",
-    ],
-    technologies: ["Python", "pandas", "scikit-learn", "Matplotlib", "Machine Learning"],
-    github: "https://github.com/YOMILEONEL/Big-Data-Analytics",
-  },
-  {
-    title: "Twitter Sentiment Analysis",
-    subtitle: "NLP & Machine Learning",
-    icon: "💬",
-    category: "Natural Language Processing",
-    description:
-      "Ein NLP-Projekt zur Analyse und Klassifikation von Tweets in positive, negative und neutrale Stimmungen. Klassische Machine-Learning-Verfahren werden mit BERT-basierten Ansätzen verglichen.",
-    features: [
-      "Textvorverarbeitung und Label-Mapping",
-      "TF-IDF-Vektorisierung",
-      "Logistic Regression und LinearSVC",
-      "BERT-basierte Sprachrepräsentationen",
-      "Visualisierung mit WordCloud und Matplotlib",
-    ],
-    technologies: [
-      "Python",
-      "scikit-learn",
-      "spaCy",
-      "Transformers",
-      "BERT",
-      "WordCloud",
-      "Matplotlib",
-    ],
-    github:
-      "https://github.com/YOMILEONEL/Twitter-Sentiment-Analysis.-Vergleich-von-TF-IDF-LinearSVC-und-Bert",
-  },
-];
+import { useLanguage } from "../i18n/LanguageContext";
 
 export function Projects() {
+  const { dict } = useLanguage();
+  const { projects } = dict;
+
   return (
     <section
       id="projects"
@@ -127,23 +26,20 @@ export function Projects() {
           viewport={{ once: true }}
         >
           <p className="text-sm md:text-base uppercase tracking-[0.3em] text-blue-400 font-semibold mb-3">
-            Portfolio
+            {projects.eyebrow}
           </p>
 
           <h2 className="text-4xl md:text-5xl font-extrabold mb-5">
-            Meine Projekte
+            {projects.title}
           </h2>
 
           <p className="max-w-3xl mx-auto text-gray-300 text-base md:text-lg leading-relaxed">
-            Eine Auswahl meiner Projekte aus Fullstack-Entwicklung,
-            Softwarearchitektur, Machine Learning und Natural Language
-            Processing. Jedes Projekt zeigt einen anderen technischen
-            Schwerpunkt — von REST-APIs bis KI-gestützter Datenanalyse.
+            {projects.intro}
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {projects.items.map((project, index) => (
             <motion.article
               key={project.title}
               className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-7 md:p-8 shadow-2xl backdrop-blur-sm hover:bg-white/10 transition"
@@ -186,7 +82,7 @@ export function Projects() {
 
               <div className="mb-6">
                 <h4 className="text-sm uppercase tracking-wider text-gray-400 font-semibold mb-3">
-                  Kernfunktionen
+                  {projects.coreFeaturesLabel}
                 </h4>
 
                 <ul className="space-y-2 text-left text-gray-300">
@@ -201,7 +97,7 @@ export function Projects() {
 
               <div className="mb-7">
                 <h4 className="text-sm uppercase tracking-wider text-gray-400 font-semibold mb-3">
-                  Technologien
+                  {projects.technologiesLabel}
                 </h4>
 
                 <div className="flex flex-wrap gap-2">
@@ -224,7 +120,7 @@ export function Projects() {
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Zum Projekt
+                {projects.viewProjectLabel}
               </motion.a>
             </motion.article>
           ))}

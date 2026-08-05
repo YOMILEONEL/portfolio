@@ -1,10 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export function HeroSection() {
+  const { dict } = useLanguage();
+
   return (
     <section
+      id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-24 text-center"
       style={{
         backgroundImage: "url('/1.jpg')",
@@ -21,7 +25,7 @@ export function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center">
         <motion.img
           src="/cv1.jpg"
-          alt="Steve Leonel Yomi Mbiakop"
+          alt={dict.hero.name}
           className="w-36 h-36 md:w-48 md:h-48 rounded-full object-cover mb-8 shadow-2xl border-4 border-white/30"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -34,7 +38,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          Fullstack Developer · KI-Enthusiast · Informatikstudent
+          {dict.hero.eyebrow}
         </motion.p>
 
         <motion.h1
@@ -43,10 +47,8 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Hallo, ich bin{" "}
-          <span className="text-blue-400">
-            Steve Leonel Yomi Mbiakop
-          </span>
+          {dict.hero.greetingPrefix}{" "}
+          <span className="text-blue-400">{dict.hero.name}</span>
         </motion.h1>
 
         <motion.p
@@ -55,10 +57,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Ich studiere Informatik an der Technischen Universität Clausthal und
-          entwickle moderne, skalierbare Softwarelösungen mit Fokus auf
-          Fullstack-Webentwicklung, künstliche Intelligenz und saubere
-          Softwarearchitektur.
+          {dict.hero.paragraph1}
         </motion.p>
 
         <motion.p
@@ -67,10 +66,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35 }}
         >
-          Meine Schwerpunkte liegen in Java, Spring Boot, React, Next.js,
-          TypeScript, Datenbanken, Docker und REST-APIs. Zusätzlich beschäftige
-          ich mich mit Automatisierung, n8n, OpenAI-API und intelligenten
-          Systemen für reale Anwendungsfälle.
+          {dict.hero.paragraph2}
         </motion.p>
 
         <motion.div
@@ -79,16 +75,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45 }}
         >
-          {[
-            "Next.js",
-            "TypeScript",
-            "React",
-            "Spring Boot",
-            "Java",
-            "Python",
-            "Docker",
-            "KI",
-          ].map((skill) => (
+          {dict.hero.skills.map((skill) => (
             <span
               key={skill}
               className="px-4 py-2 rounded-full bg-white/10 text-white text-sm border border-white/20 backdrop-blur-sm"
@@ -110,7 +97,7 @@ export function HeroSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
-            Zu meinen Projekten
+            {dict.hero.ctaProjects}
           </motion.a>
 
           <motion.a
@@ -119,7 +106,7 @@ export function HeroSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
-            Kontakt aufnehmen
+            {dict.hero.ctaContact}
           </motion.a>
         </motion.div>
       </div>

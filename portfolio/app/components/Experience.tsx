@@ -1,139 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const experiences = [
-  {
-    role: "Werkstudent Softwareentwicklung",
-    company: "Mariana Service GmbH",
-    period: "Dezember 2025 – heute",
-    type: "Fullstack · E-Commerce · Automatisierung",
-    description:
-      "Mitarbeit an der Konzeption und Entwicklung einer B2C-E-Commerce-Plattform sowie an Automatisierungen zur Entlastung des IT-Supports.",
-    points: [
-      "Requirements Engineering als Grundlage für Systemarchitektur und technische Umsetzung",
-      "Entwicklung eines B2C-Online-Shops mit Spring Boot, Next.js und TypeScript",
-      "Implementierung von Produktverwaltung, Kassensystemen und Admin-Dashboards",
-      "Integration externer Dienste wie Stripe, AWS S3/Supabase Storage, Resend und RabbitMQ",
-      "Deployment auf VPS mit Docker, nginx und HTTPS-Konfiguration über Let’s Encrypt",
-      "Aufbau einer CI/CD-Pipeline mit GitHub Actions für automatisierte Tests, Builds und Docker-basiertes Deployment",
-      "Automatisierung von Support-Prozessen mit n8n, OpenAI API, REST APIs und Webhooks",
-    ],
-    technologies: [
-      "Java",
-      "Spring Boot",
-      "Next.js",
-      "TypeScript",
-      "PostgreSQL",
-      "Docker",
-      "nginx",
-      "RabbitMQ",
-      "OpenAI API",
-      "n8n",
-      "GitHub Actions",
-    ],
-  },
-  {
-    role: "Tutor für Logik und Verifikation",
-    company: "Technische Universität Clausthal – Institut für Informatik",
-    period: "April 2026 – heute",
-    type: "Lehre · Formale Methoden",
-    description:
-      "Betreuung von Studierenden in Aussagenlogik, Prädikatenlogik und Verifikation mit Fokus auf strukturierte Erklärungen und Klausurvorbereitung.",
-    points: [
-      "Unterstützung bei Übungen, Tutorien und fachlichen Fragen",
-      "Vermittlung formaler Beweistechniken und logischer Konzepte",
-      "Strukturierte Vorbereitung auf Klausuren und Übungsaufgaben",
-    ],
-    technologies: [
-      "Logik",
-      "Verifikation",
-      "Formale Methoden",
-      "Didaktik",
-    ],
-  },
-  {
-    role: "Tutor für Informatik III",
-    company: "Technische Universität Clausthal – Institut für Informatik",
-    period: "Oktober 2025 – März 2026",
-    type: "Lehre · Theoretische Informatik",
-    description:
-      "Vermittlung komplexer Inhalte aus Automatentheorie, formalen Sprachen und Grammatiken in Übungen und Lerngruppen.",
-    points: [
-      "Erklärung von Automaten, Grammatiken und formalen Sprachen",
-      "Unterstützung bei Übungsaufgaben und Klausurvorbereitung",
-      "Aufbereitung abstrakter Inhalte durch verständliche Beispiele",
-    ],
-    technologies: [
-      "Automatentheorie",
-      "Formale Sprachen",
-      "Grammatiken",
-      "Lehre",
-    ],
-  },
-  {
-    role: "Tutor für Informatikwerkstatt – Anwendungssysteme",
-    company: "Technische Universität Clausthal – Institut für Informatik",
-    period: "Oktober 2025 – März 2026",
-    type: "Python · Teamarbeit · Softwaretechnik",
-    description:
-      "Unterstützung von Studierenden bei der Umsetzung von Anwendungen in Python unter Einsatz agiler Methoden und kollaborativer Entwicklung.",
-    points: [
-      "Betreuung von Python-Projekten mit Pygame",
-      "Unterstützung bei Git, Scrum, Taiga und Projektorganisation",
-      "Vermittlung von Best Practices in Softwaretechnik und Teamarbeit",
-    ],
-    technologies: [
-      "Python",
-      "Pygame",
-      "Git",
-      "Scrum",
-      "Taiga",
-    ],
-  },
-  {
-    role: "Programmiertutor",
-    company: "Coding Giants GmbH",
-    period: "März 2025 – März 2026",
-    type: "Programmierung · Mentoring",
-    description:
-      "Durchführung von Programmierkursen für Kinder und Jugendliche mit Fokus auf verständliche und praxisnahe Vermittlung technischer Inhalte.",
-    points: [
-      "Unterricht in Scratch, Python, Java und C#",
-      "Vermittlung von Algorithmen und Datenstrukturen auf einfache Weise",
-      "Förderung von Problemlösekompetenz und technischem Verständnis",
-    ],
-    technologies: [
-      "Scratch",
-      "Python",
-      "Java",
-      "C#",
-      "Algorithmen",
-    ],
-  },
-  {
-    role: "Ehrenamtlicher Mitarbeiter",
-    company: "Clausthaler Studenten aus Kamerun e. V. / CSK",
-    period: "April 2026 – heute",
-    type: "Engagement · Community · Webplattform",
-    description:
-      "Unterstützung neuer Studierender und Mitarbeit an digitalen sowie kulturellen Vereinsaktivitäten.",
-    points: [
-      "Unterstützung neuer Studierender bei der Orientierung in Clausthal",
-      "Fachliche Hilfe in ausgewählten Studienfächern",
-      "Mitwirkung an der Entwicklung der digitalen Vereinsplattform",
-      "Mitorganisation kultureller und sozialer Aktivitäten",
-    ],
-    technologies: [
-      "Community",
-      "Webentwicklung",
-      "Organisation",
-      "Mentoring",
-    ],
-  },
-];
+import { useLanguage } from "../i18n/LanguageContext";
 
 export function Experience() {
+  const { dict } = useLanguage();
+  const { experience } = dict;
+
   return (
     <section
       id="experience"
@@ -152,17 +25,15 @@ export function Experience() {
           viewport={{ once: true }}
         >
           <p className="text-sm md:text-base uppercase tracking-[0.3em] text-blue-400 font-semibold mb-3">
-            Erfahrung
+            {experience.eyebrow}
           </p>
 
           <h2 className="text-4xl md:text-5xl font-extrabold mb-5">
-            Berufserfahrung & Engagement
+            {experience.title}
           </h2>
 
           <p className="max-w-3xl mx-auto text-gray-300 text-base md:text-lg leading-relaxed">
-            Neben meinen Projekten sammle ich praktische Erfahrung in der
-            Fullstack-Entwicklung, technischen Lehre, Softwarearchitektur,
-            Automatisierung und Community-Arbeit.
+            {experience.intro}
           </p>
         </motion.div>
 
@@ -170,7 +41,7 @@ export function Experience() {
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-px bg-white/10" />
 
           <div className="space-y-10">
-            {experiences.map((item, index) => (
+            {experience.items.map((item, index) => (
               <motion.article
                 key={`${item.role}-${item.company}`}
                 className={`relative grid md:grid-cols-2 gap-8 ${

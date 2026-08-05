@@ -1,0 +1,345 @@
+import type { Dictionary } from "./types";
+
+export const fr: Dictionary = {
+  meta: {
+    title: "Portfolio de Steve Leonel",
+    description:
+      "Portfolio de Steve Leonel Yomi Mbiakop – Développeur Fullstack, Passionné d'IA et Étudiant en informatique.",
+  },
+  resumeUrl: "/cv_fr.pdf",
+  nav: {
+    home: "Accueil",
+    about: "À propos",
+    experience: "Expérience",
+    projects: "Projets",
+    contact: "Contact",
+    subtitle: "Développeur Fullstack · Passionné d'IA",
+    cvButton: "CV",
+    cvButtonMobile: "Télécharger le CV",
+    menuAria: "Ouvrir ou fermer la navigation",
+  },
+  hero: {
+    eyebrow: "Développeur Fullstack · Passionné d'IA · Étudiant en informatique",
+    greetingPrefix: "Bonjour, je suis",
+    name: "Steve Leonel Yomi Mbiakop",
+    paragraph1:
+      "J'étudie l'informatique à l'Université Technique de Clausthal et je développe des solutions logicielles modernes et évolutives, avec un accent sur le développement web fullstack, l'intelligence artificielle et une architecture logicielle propre.",
+    paragraph2:
+      "Mes domaines de prédilection sont Java, Spring Boot, React, Next.js, TypeScript, les bases de données, Docker et les API REST. Je m'intéresse également à l'automatisation, n8n, l'API OpenAI et aux systèmes intelligents pour des cas d'usage concrets.",
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Spring Boot",
+      "Java",
+      "Python",
+      "Docker",
+      "IA",
+    ],
+    ctaProjects: "Voir mes projets",
+    ctaContact: "Me contacter",
+  },
+  aboutMe: {
+    eyebrow: "Qui je suis",
+    title: "À propos de moi",
+    intro:
+      "Je suis Steve Leonel Yomi Mbiakop, étudiant en informatique, développeur fullstack et passionné d'IA basé en Allemagne. Je développe des solutions logicielles alliant précision technique, architecture moderne et applicabilité concrète.",
+    motivationTitle: "Ma motivation",
+    motivation1:
+      "Mon objectif est de développer des applications robustes et conviviales qui résolvent de vrais problèmes. Je trouve particulièrement passionnant de relier le développement logiciel classique à l'intelligence artificielle, à l'automatisation et à une architecture web évolutive.",
+    motivation2:
+      "Grâce à mon activité de tuteur, je transmets des sujets informatiques complexes de manière claire et structurée. Cette expérience m'aide aussi en développement logiciel : je raisonne de manière analytique, je communique clairement et j'accorde une grande importance à un code propre et maintenable.",
+    motivation3:
+      "J'acquiers une expérience pratique notamment dans des projets utilisant Spring Boot, Next.js, TypeScript, Docker, des API REST, MySQL et PostgreSQL, ainsi que des automatisations avec n8n et l'API OpenAI.",
+    highlights: [
+      {
+        title: "Étudiant en informatique",
+        text: "Licence en informatique à l'Université Technique de Clausthal, avec un accent sur le génie logiciel, les algorithmes, les bases de données et les systèmes distribués.",
+      },
+      {
+        title: "Développement Fullstack",
+        text: "Développement d'applications web modernes avec Java, Spring Boot, React, Next.js, TypeScript, des API REST et des bases de données relationnelles.",
+      },
+      {
+        title: "Tuteur & Mentor",
+        text: "Expérience en tant que tuteur en logique, vérification, théorie des automates, langages formels, Python, Java et C#.",
+      },
+      {
+        title: "IA & Automatisation",
+        text: "Intérêt pour les systèmes intelligents, l'API OpenAI, les automatisations n8n et les solutions logicielles orientées données.",
+      },
+    ],
+    techTitle: "Technologies & Outils",
+    techText:
+      "Je travaille avec des technologies modernes couvrant le backend, le frontend, le DevOps, les bases de données et l'automatisation assistée par IA.",
+    programmingLanguagesLabel: "Langages :",
+    frameworksLabel: "Frameworks :",
+    toolsLabel: "Outils :",
+    langSectionTitle: "Langues",
+    langSectionText:
+      "Français : langue maternelle · Allemand : courant (niveau professionnel) · Anglais : bonnes connaissances",
+    cvDownload: "Télécharger le CV",
+  },
+  experience: {
+    eyebrow: "Expérience",
+    title: "Expérience professionnelle & engagement",
+    intro:
+      "En plus de mes projets, j'acquiers une expérience pratique en développement fullstack, en enseignement technique, en architecture logicielle, en automatisation et en travail associatif.",
+    items: [
+      {
+        role: "Étudiant salarié en développement logiciel",
+        company: "Mariana Service GmbH",
+        period: "Décembre 2025 – aujourd'hui",
+        type: "Fullstack · E-commerce · Automatisation",
+        description:
+          "Participation à la conception et au développement d'une plateforme e-commerce B2C, ainsi qu'à des automatisations visant à soulager le support informatique.",
+        points: [
+          "Analyse des exigences comme base de l'architecture système et de la mise en œuvre technique",
+          "Développement d'une boutique en ligne B2C avec Spring Boot, Next.js et TypeScript",
+          "Implémentation de la gestion des produits, des systèmes de caisse et des tableaux de bord d'administration",
+          "Intégration de services externes tels que Stripe, AWS S3/Supabase Storage, Resend et RabbitMQ",
+          "Déploiement sur VPS avec Docker, nginx et configuration HTTPS via Let's Encrypt",
+          "Mise en place d'un pipeline CI/CD avec GitHub Actions pour les tests automatisés, les builds et le déploiement basé sur Docker",
+          "Automatisation des processus de support avec n8n, l'API OpenAI, des API REST et des webhooks",
+        ],
+        technologies: [
+          "Java",
+          "Spring Boot",
+          "Next.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker",
+          "nginx",
+          "RabbitMQ",
+          "OpenAI API",
+          "n8n",
+          "GitHub Actions",
+        ],
+      },
+      {
+        role: "Tuteur en logique et vérification",
+        company: "Université Technique de Clausthal – Institut d'informatique",
+        period: "Avril 2026 – aujourd'hui",
+        type: "Enseignement · Méthodes formelles",
+        description:
+          "Accompagnement des étudiants en logique propositionnelle, logique des prédicats et vérification, avec un accent sur des explications structurées et la préparation aux examens.",
+        points: [
+          "Aide lors des exercices, des travaux dirigés et des questions techniques",
+          "Transmission des techniques de preuve formelle et des concepts logiques",
+          "Préparation structurée aux examens et aux exercices",
+        ],
+        technologies: ["Logique", "Vérification", "Méthodes formelles", "Pédagogie"],
+      },
+      {
+        role: "Tuteur en Informatique III",
+        company: "Université Technique de Clausthal – Institut d'informatique",
+        period: "Octobre 2025 – Mars 2026",
+        type: "Enseignement · Informatique théorique",
+        description:
+          "Transmission de contenus complexes en théorie des automates, langages formels et grammaires lors d'exercices et de groupes de travail.",
+        points: [
+          "Explication des automates, grammaires et langages formels",
+          "Aide pour les exercices et la préparation aux examens",
+          "Simplification de contenus abstraits à l'aide d'exemples compréhensibles",
+        ],
+        technologies: [
+          "Théorie des automates",
+          "Langages formels",
+          "Grammaires",
+          "Enseignement",
+        ],
+      },
+      {
+        role: "Tuteur pour l'atelier informatique – Systèmes applicatifs",
+        company: "Université Technique de Clausthal – Institut d'informatique",
+        period: "Octobre 2025 – Mars 2026",
+        type: "Python · Travail d'équipe · Génie logiciel",
+        description:
+          "Accompagnement des étudiants dans la réalisation d'applications en Python à l'aide de méthodes agiles et d'un développement collaboratif.",
+        points: [
+          "Encadrement de projets Python avec Pygame",
+          "Aide sur Git, Scrum, Taiga et l'organisation de projet",
+          "Transmission des bonnes pratiques en génie logiciel et travail d'équipe",
+        ],
+        technologies: ["Python", "Pygame", "Git", "Scrum", "Taiga"],
+      },
+      {
+        role: "Tuteur en programmation",
+        company: "Coding Giants GmbH",
+        period: "Mars 2025 – Mars 2026",
+        type: "Programmation · Mentorat",
+        description:
+          "Animation de cours de programmation pour enfants et adolescents, avec un accent sur une transmission claire et concrète des contenus techniques.",
+        points: [
+          "Enseignement de Scratch, Python, Java et C#",
+          "Transmission simple des algorithmes et des structures de données",
+          "Développement des compétences de résolution de problèmes et de la compréhension technique",
+        ],
+        technologies: ["Scratch", "Python", "Java", "C#", "Algorithmes"],
+      },
+      {
+        role: "Bénévole",
+        company: "Clausthaler Studenten aus Kamerun e. V. / CSK",
+        period: "Avril 2026 – aujourd'hui",
+        type: "Engagement · Communauté · Plateforme web",
+        description:
+          "Accompagnement des nouveaux étudiants et participation aux activités numériques et culturelles de l'association.",
+        points: [
+          "Aide aux nouveaux étudiants pour s'orienter à Clausthal",
+          "Soutien académique dans certaines matières",
+          "Participation au développement de la plateforme numérique de l'association",
+          "Co-organisation d'activités culturelles et sociales",
+        ],
+        technologies: ["Communauté", "Développement web", "Organisation", "Mentorat"],
+      },
+    ],
+  },
+  projects: {
+    eyebrow: "Portfolio",
+    title: "Mes projets",
+    intro:
+      "Une sélection de mes projets en développement fullstack, architecture logicielle, machine learning et traitement du langage naturel. Chaque projet met en avant une orientation technique différente — des API REST à l'analyse de données assistée par IA.",
+    coreFeaturesLabel: "Fonctionnalités clés",
+    technologiesLabel: "Technologies",
+    viewProjectLabel: "Voir le projet",
+    items: [
+      {
+        title: "Application météo",
+        subtitle: "React + TypeScript",
+        icon: "🌦",
+        category: "Frontend / API",
+        description:
+          "Une application web responsive affichant des données météo en temps réel via l'API OpenWeatherMap. Les utilisateurs peuvent rechercher des villes et obtenir des informations actuelles sur la température, l'humidité, le vent et les conditions météorologiques.",
+        features: [
+          "Recherche de ville avec affichage météo dynamique",
+          "Connexion à l'API OpenWeatherMap",
+          "Gestion des erreurs pour les saisies invalides",
+          "Interface responsive avec icônes météo",
+          "Structure modulaire avec les React Hooks",
+        ],
+        technologies: [
+          "React",
+          "TypeScript",
+          "Axios",
+          "CSS",
+          "HTML",
+          "Git",
+          "React Icons",
+        ],
+        github: "https://github.com/YOMILEONEL/weather_app",
+      },
+      {
+        title: "Jeu de dames avec mode multijoueur",
+        subtitle: "Spring Boot + Swing",
+        icon: "♟",
+        category: "Fullstack / Développement de jeux",
+        description:
+          "Un jeu de dames client-serveur avec Spring Boot côté backend et Java Swing côté frontend. Le projet combine logique de jeu, communication via API REST, persistance des données et synchronisation en temps réel.",
+        features: [
+          "API REST pour les joueurs, l'état de la partie et les coups",
+          "Synchronisation en temps réel via long polling",
+          "Logique de jeu basée sur la POO, les algorithmes et les structures de données",
+          "Structure MVC côté frontend",
+          "Conception du système avec UML et Figma",
+        ],
+        technologies: ["Java", "Swing", "Spring Boot", "MySQL", "UML", "Figma", "Git"],
+        github: "https://github.com/YOMILEONEL/damespiel",
+      },
+      {
+        title: "RoomBookingApp",
+        subtitle: "Application web fullstack",
+        icon: "🏢",
+        category: "Fullstack / Application d'entreprise",
+        description:
+          "Un système de réservation de salles avec authentification sécurisée, autorisation basée sur les rôles et une séparation claire entre frontend, backend et base de données.",
+        features: [
+          "Gestion des utilisateurs, des salles et des réservations",
+          "Fonctionnalités CRUD via API REST",
+          "Authentification et autorisation avec Spring Security",
+          "Frontend React avec Material UI",
+          "Base de données MySQL avec Hibernate JPA",
+        ],
+        technologies: [
+          "Java",
+          "Spring Boot",
+          "Spring Security",
+          "React",
+          "TypeScript",
+          "Material UI",
+          "MySQL",
+        ],
+        github: "https://github.com/YOMILEONEL/room_booking_system",
+      },
+      {
+        title: "LMS Risk Prediction",
+        subtitle: "Big Data & Machine Learning",
+        icon: "📊",
+        category: "Data Science / Machine Learning",
+        description:
+          "Un projet de machine learning visant à prédire les risques de réussite académique à partir de données d'interaction LMS comportant plus de 230 000 enregistrements.",
+        features: [
+          "Nettoyage des données et feature engineering",
+          "Mise à l'échelle et préparation des modèles",
+          "Entraînement de différents modèles de ML",
+          "Comparaison entre Decision Tree, Random Forest, AdaBoost et MLP",
+          "Évaluation avec matrice de confusion, accuracy, precision et recall",
+        ],
+        technologies: ["Python", "pandas", "scikit-learn", "Matplotlib", "Machine Learning"],
+        github: "https://github.com/YOMILEONEL/Big-Data-Analytics",
+      },
+      {
+        title: "Twitter Sentiment Analysis",
+        subtitle: "NLP & Machine Learning",
+        icon: "💬",
+        category: "Traitement du langage naturel",
+        description:
+          "Un projet de NLP pour analyser et classifier des tweets en sentiments positifs, négatifs ou neutres. Les méthodes classiques de machine learning sont comparées à des approches basées sur BERT.",
+        features: [
+          "Prétraitement du texte et mapping des labels",
+          "Vectorisation TF-IDF",
+          "Logistic Regression et LinearSVC",
+          "Représentations linguistiques basées sur BERT",
+          "Visualisation avec WordCloud et Matplotlib",
+        ],
+        technologies: [
+          "Python",
+          "scikit-learn",
+          "spaCy",
+          "Transformers",
+          "BERT",
+          "WordCloud",
+          "Matplotlib",
+        ],
+        github:
+          "https://github.com/YOMILEONEL/Twitter-Sentiment-Analysis.-Vergleich-von-TF-IDF-LinearSVC-und-Bert",
+      },
+    ],
+  },
+  contact: {
+    eyebrow: "Contact",
+    title: "Travaillons ensemble",
+    intro:
+      "Vous souhaitez me parler d'un projet, d'un poste d'étudiant salarié, d'une collaboration ou d'une idée technique ? N'hésitez pas à m'envoyer un message ou à me contacter directement par e-mail, GitHub ou LinkedIn.",
+    contactInfoTitle: "Informations de contact",
+    contactInfoText:
+      "Je suis ouvert à des projets logiciels intéressants, au développement fullstack, aux applications assistées par IA, à l'automatisation et aux échanges professionnels en informatique.",
+    emailLabel: "E-mail",
+    locationLabel: "Localisation",
+    locationValue: "Clausthal-Zellerfeld, Allemagne",
+    profilesTitle: "Profils",
+    formTitle: "Envoyer un message",
+    nameLabel: "Votre nom",
+    namePlaceholder: "Jean Dupont",
+    emailFieldLabel: "Votre e-mail",
+    emailPlaceholder: "jean@example.com",
+    messageLabel: "Votre message",
+    messagePlaceholder: "Décrivez brièvement votre demande...",
+    submitButton: "Préparer le message",
+    submitNote:
+      "En validant, votre messagerie s'ouvre avec le message déjà préparé.",
+    mailSubjectPrefix: "Demande de contact de",
+    mailBodyNameLabel: "Nom",
+    mailBodyEmailLabel: "E-mail",
+    mailBodyMessageLabel: "Message",
+  },
+};

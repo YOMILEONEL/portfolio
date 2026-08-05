@@ -2,26 +2,11 @@
 
 import { motion } from "framer-motion";
 import { TechLogos } from "./TechLogos";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export function AboutMe() {
-  const highlights = [
-    {
-      title: "Informatikstudent",
-      text: "B.Sc. Informatik an der Technischen Universität Clausthal mit Fokus auf Softwaretechnik, Algorithmen, Datenbanken und verteilte Systeme.",
-    },
-    {
-      title: "Fullstack-Entwicklung",
-      text: "Entwicklung moderner Webanwendungen mit Java, Spring Boot, React, Next.js, TypeScript, REST-APIs und relationalen Datenbanken.",
-    },
-    {
-      title: "Tutor & Mentor",
-      text: "Erfahrung als Tutor für Logik, Verifikation, Automatentheorie, formale Sprachen, Python, Java und C#.",
-    },
-    {
-      title: "KI & Automatisierung",
-      text: "Interesse an intelligenten Systemen, OpenAI-API, n8n-Automatisierungen und datengetriebenen Softwarelösungen.",
-    },
-  ];
+  const { dict } = useLanguage();
+  const { aboutMe } = dict;
 
   return (
     <section
@@ -42,18 +27,15 @@ export function AboutMe() {
           viewport={{ once: true }}
         >
           <p className="text-sm md:text-base uppercase tracking-[0.3em] text-blue-400 font-semibold mb-3">
-            Wer ich bin
+            {aboutMe.eyebrow}
           </p>
 
           <h2 className="text-4xl md:text-5xl font-extrabold mb-5">
-            Über mich
+            {aboutMe.title}
           </h2>
 
           <p className="max-w-3xl mx-auto text-gray-300 text-base md:text-lg leading-relaxed">
-            Ich bin Steve Leonel Yomi Mbiakop, Informatikstudent,
-            Fullstack-Entwickler und KI-Enthusiast aus Deutschland. Ich
-            entwickle Softwarelösungen, die technische Präzision, moderne
-            Architektur und praktische Anwendbarkeit verbinden.
+            {aboutMe.intro}
           </p>
         </motion.div>
 
@@ -67,28 +49,19 @@ export function AboutMe() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-5">
-              Meine Motivation
+              {aboutMe.motivationTitle}
             </h3>
 
             <p className="text-gray-300 leading-relaxed mb-5">
-              Mein Ziel ist es, robuste und benutzerfreundliche Anwendungen zu
-              entwickeln, die echte Probleme lösen. Besonders spannend finde ich
-              die Verbindung von klassischer Softwareentwicklung mit
-              künstlicher Intelligenz, Automatisierung und skalierbarer
-              Webarchitektur.
+              {aboutMe.motivation1}
             </p>
 
             <p className="text-gray-300 leading-relaxed mb-5">
-              Durch meine Tätigkeit als Tutor vermittle ich komplexe
-              Informatikthemen verständlich und strukturiert. Diese Erfahrung
-              hilft mir auch in der Softwareentwicklung: Ich denke analytisch,
-              kommuniziere klar und lege Wert auf sauberen, wartbaren Code.
+              {aboutMe.motivation2}
             </p>
 
             <p className="text-gray-300 leading-relaxed">
-              Praktische Erfahrung sammle ich unter anderem in Projekten mit
-              Spring Boot, Next.js, TypeScript, Docker, REST-APIs, MySQL,
-              PostgreSQL sowie Automatisierungen mit n8n und der OpenAI-API.
+              {aboutMe.motivation3}
             </p>
           </motion.div>
 
@@ -100,7 +73,7 @@ export function AboutMe() {
             transition={{ duration: 0.7, delay: 0.15 }}
             viewport={{ once: true }}
           >
-            {highlights.map((item) => (
+            {aboutMe.highlights.map((item) => (
               <div
                 key={item.title}
                 className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition"
@@ -126,12 +99,11 @@ export function AboutMe() {
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold mb-3">
-              Technologien & Tools
+              {aboutMe.techTitle}
             </h3>
 
             <p className="max-w-3xl mx-auto text-gray-300">
-              Ich arbeite mit modernen Technologien aus Backend, Frontend,
-              DevOps, Datenbanken und KI-gestützter Automatisierung.
+              {aboutMe.techText}
             </p>
           </div>
 
@@ -139,21 +111,27 @@ export function AboutMe() {
 
           <div className="mt-8 grid md:grid-cols-3 gap-5 text-sm text-gray-300">
             <div className="rounded-2xl bg-black/20 border border-white/10 p-5">
-              <span className="font-semibold text-white">Sprachen:</span>
+              <span className="font-semibold text-white">
+                {aboutMe.programmingLanguagesLabel}
+              </span>
               <p className="mt-2">
                 Java, Python, JavaScript, TypeScript, HTML, CSS, MySQL, C
               </p>
             </div>
 
             <div className="rounded-2xl bg-black/20 border border-white/10 p-5">
-              <span className="font-semibold text-white">Frameworks:</span>
+              <span className="font-semibold text-white">
+                {aboutMe.frameworksLabel}
+              </span>
               <p className="mt-2">
                 Spring Boot, Next.js, React, Vite, Pygame
               </p>
             </div>
 
             <div className="rounded-2xl bg-black/20 border border-white/10 p-5">
-              <span className="font-semibold text-white">Tools:</span>
+              <span className="font-semibold text-white">
+                {aboutMe.toolsLabel}
+              </span>
               <p className="mt-2">
                 VS Code, IntelliJ, PyCharm, Postman, Docker, Git, Figma, nginx
               </p>
@@ -171,21 +149,18 @@ export function AboutMe() {
         >
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold mb-2">
-              Sprachen
+              {aboutMe.langSectionTitle}
             </h3>
-            <p className="text-gray-300">
-              Französisch: Muttersprache · Deutsch: verhandlungssicher ·
-              Englisch: gute Kenntnisse
-            </p>
+            <p className="text-gray-300">{aboutMe.langSectionText}</p>
           </div>
 
           <a
-            href="/lebenslauf_v2.pdf"
+            href={dict.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-7 py-3 bg-blue-600 text-white rounded-xl font-semibold shadow-lg hover:bg-blue-700 transition"
           >
-            Lebenslauf herunterladen
+            {aboutMe.cvDownload}
           </a>
         </motion.div>
       </div>

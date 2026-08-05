@@ -2,17 +2,25 @@
 
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import { languages, useLanguage } from "../i18n/LanguageContext";
 
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Über mich", href: "#aboutme" },
-  { label: "Erfahrung", href: "#experience" },
-  { label: "Projekte", href: "#projects" },
-  { label: "Kontakt", href: "#contact" },
-];
+const languageLabels: Record<string, string> = {
+  de: "DE",
+  en: "EN",
+  fr: "FR",
+};
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage, dict } = useLanguage();
+
+  const navLinks = [
+    { label: dict.nav.home, href: "#home" },
+    { label: dict.nav.about, href: "#aboutme" },
+    { label: dict.nav.experience, href: "#experience" },
+    { label: dict.nav.projects, href: "#projects" },
+    { label: dict.nav.contact, href: "#contact" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
@@ -24,7 +32,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden text-xs text-gray-400 sm:block">
-            Fullstack Developer · KI-Enthusiast
+            {dict.nav.subtitle}
           </div>
         </a>
 
@@ -40,13 +48,31 @@ export function Navbar() {
             </a>
           ))}
 
+          <div className="flex items-center gap-1 rounded-xl border border-white/10 bg-white/5 p-1">
+            {languages.map((lang) => (
+              <button
+                key={lang}
+                type="button"
+                onClick={() => setLanguage(lang)}
+                aria-pressed={language === lang}
+                className={`rounded-lg px-2.5 py-1 text-xs font-semibold transition ${
+                  language === lang
+                    ? "bg-blue-600 text-white"
+                    : "text-gray-300 hover:text-white"
+                }`}
+              >
+                {languageLabels[lang]}
+              </button>
+            ))}
+          </div>
+
           <a
-            href="/lebenslauf_v2.pdf"
+            href={dict.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-blue-700"
           >
-            Lebenslauf
+            {dict.nav.cvButton}
           </a>
         </div>
 
@@ -55,7 +81,7 @@ export function Navbar() {
           type="button"
           className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 text-white md:hidden"
           onClick={() => setIsOpen((value) => !value)}
-          aria-label="Navigation öffnen oder schließen"
+          aria-label={dict.nav.menuAria}
           aria-expanded={isOpen}
         >
           {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
@@ -77,14 +103,32 @@ export function Navbar() {
               </a>
             ))}
 
+            <div className="flex items-center justify-center gap-1 rounded-xl border border-white/10 bg-white/5 p-1">
+              {languages.map((lang) => (
+                <button
+                  key={lang}
+                  type="button"
+                  onClick={() => setLanguage(lang)}
+                  aria-pressed={language === lang}
+                  className={`flex-1 rounded-lg px-2.5 py-2 text-sm font-semibold transition ${
+                    language === lang
+                      ? "bg-blue-600 text-white"
+                      : "text-gray-300 hover:text-white"
+                  }`}
+                >
+                  {languageLabels[lang]}
+                </button>
+              ))}
+            </div>
+
             <a
-              href="/lebenslauf_v2.pdf"
+              href={dict.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="rounded-xl bg-blue-600 px-4 py-3 text-center font-semibold text-white transition hover:bg-blue-700"
             >
-              Lebenslauf herunterladen
+              {dict.nav.cvButtonMobile}
             </a>
           </div>
         </div>

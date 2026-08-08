@@ -19,6 +19,8 @@ import {
   SiOpenai,
   SiRabbitmq,
   SiVite,
+  SiTailwindcss,
+  SiSupabase,
 } from "react-icons/si";
 
 import { FaJava } from "react-icons/fa";
@@ -96,6 +98,18 @@ const technologies = [
     icon: SiCss,
     category: "Frontend",
     color: "text-blue-400",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: SiTailwindcss,
+    category: "Frontend",
+    color: "text-cyan-300",
+  },
+  {
+    name: "Supabase",
+    icon: SiSupabase,
+    category: "Database",
+    color: "text-green-400",
   },
   {
     name: "VS Code",

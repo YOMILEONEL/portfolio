@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Steve Leonel Yomi Mbiakop
 
-## Getting Started
+Persönliches Portfolio als Next.js-Anwendung mit Sektionen für Vorstellung, Werdegang, Projekte
+und Kontakt. Mehrsprachig (Deutsch/Englisch/Französisch) mit sprachspezifischem Lebenslauf-Download.
 
-First, run the development server:
+**Live:** _(hier ggf. die Deploy-URL ergänzen)_
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech-Stack
+
+- Next.js 16 (App Router), React 19, TypeScript
+- Tailwind CSS v4
+- Framer Motion für Scroll-/Hover-Animationen
+- react-icons für Technologie-Logos
+
+## Struktur
+
+```
+app/
+├── components/
+│   ├── Navbar.tsx          Navigation inkl. Sprachumschalter
+│   ├── HeroSection.tsx     Einstieg mit Kurzvorstellung und Skill-Badges
+│   ├── AboutMe.tsx         Über mich, Motivation, Tech-Übersicht
+│   ├── TechLogos.tsx       Technologie-Logo-Grid
+│   ├── Experience.tsx      Berufserfahrung & Engagement (Zeitleiste)
+│   ├── Projects.tsx        Projektkarten mit Features, Technologien, GitHub-Link
+│   └── Contact.tsx         Kontaktformular (öffnet vorbereitete E-Mail) + Profile
+└── i18n/
+    ├── LanguageContext.tsx Sprachkontext (de/en/fr) mit Umschaltung zur Laufzeit
+    └── dictionaries/       Ein Dictionary pro Sprache, typisiert über types.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Alle Texte kommen aus den Dictionaries in `app/i18n/dictionaries/`; neue Inhalte (z. B. ein
+weiteres Projekt oder eine neue Station im Werdegang) werden dort für alle drei Sprachen ergänzt.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Entwicklung
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Öffne [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build   # Produktions-Build
+npm run lint    # ESLint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Statische Next.js-App, geeignet für Vercel (`vercel.com/new`) oder jeden anderen Node-fähigen Host.

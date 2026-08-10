@@ -204,6 +204,33 @@ export const en: Dictionary = {
     viewProjectLabel: "View Project",
     items: [
       {
+        title: "CVio",
+        subtitle: "Resume Builder",
+        icon: "📄",
+        category: "Fullstack / AI-Powered App",
+        description:
+          "A free, multilingual resume builder: pick a template, fill in your details in a live-preview editor, and export an ATS-friendly PDF. A built-in AI assistant can also match the resume against a job posting on request.",
+        features: [
+          "14 ATS-friendly templates with a live preview in the editor",
+          "AI-powered job-match check (Google Gemini) with a match score and improvement suggestions",
+          "Server-side PDF export via Puppeteer/Chromium",
+          "Fully multilingual interface (German, English, French)",
+          "Auth, data storage and photo storage via Supabase with row-level security",
+        ],
+        technologies: [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Supabase",
+          "PostgreSQL",
+          "Google Gemini API",
+          "Puppeteer",
+          "Vercel",
+        ],
+        github: "https://cvio-nine.vercel.app",
+      },
+      {
         title: "Weather App",
         subtitle: "React + TypeScript",
         icon: "🌦",

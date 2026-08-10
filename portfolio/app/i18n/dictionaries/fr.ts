@@ -204,6 +204,33 @@ export const fr: Dictionary = {
     viewProjectLabel: "Voir le projet",
     items: [
       {
+        title: "CVio",
+        subtitle: "Générateur de CV",
+        icon: "📄",
+        category: "Fullstack / Application assistée par IA",
+        description:
+          "Un générateur de CV gratuit et multilingue : choisis un modèle, saisis tes données dans un éditeur avec aperçu en direct, et exporte un PDF optimisé ATS. Un assistant IA intégré peut aussi comparer le CV à une offre d'emploi sur demande.",
+        features: [
+          "14 modèles optimisés ATS avec aperçu en direct dans l'éditeur",
+          "Comparaison d'offre d'emploi par IA (Google Gemini) avec score de correspondance et suggestions d'amélioration",
+          "Export PDF côté serveur via Puppeteer/Chromium",
+          "Interface entièrement multilingue (allemand, anglais, français)",
+          "Authentification, stockage des données et des photos via Supabase avec row-level security",
+        ],
+        technologies: [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Supabase",
+          "PostgreSQL",
+          "Google Gemini API",
+          "Puppeteer",
+          "Vercel",
+        ],
+        github: "https://cvio-nine.vercel.app",
+      },
+      {
         title: "Application météo",
         subtitle: "React + TypeScript",
         icon: "🌦",

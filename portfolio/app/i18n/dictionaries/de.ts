@@ -204,6 +204,33 @@ export const de: Dictionary = {
     viewProjectLabel: "Zum Projekt",
     items: [
       {
+        title: "CVio",
+        subtitle: "Lebenslauf-Generator",
+        icon: "📄",
+        category: "Fullstack / KI-gestützte Anwendung",
+        description:
+          "Ein kostenloser, mehrsprachiger Lebenslauf-Generator: Vorlage wählen, Daten im Editor mit Live-Vorschau eingeben und als ATS-optimiertes PDF exportieren. Ein integrierter KI-Assistent gleicht den Lebenslauf auf Wunsch gegen eine Stellenausschreibung ab.",
+        features: [
+          "14 ATS-optimierte Vorlagen mit Live-Vorschau im Editor",
+          "KI-gestützter Stellenabgleich (Google Gemini) mit Match-Score und Verbesserungsvorschlägen",
+          "Serverseitiger PDF-Export via Puppeteer/Chromium",
+          "Vollständig mehrsprachige Oberfläche (Deutsch, Englisch, Französisch)",
+          "Auth, Datenhaltung und Foto-Speicher über Supabase mit Row-Level-Security",
+        ],
+        technologies: [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Supabase",
+          "PostgreSQL",
+          "Google Gemini API",
+          "Puppeteer",
+          "Vercel",
+        ],
+        github: "https://cvio-nine.vercel.app",
+      },
+      {
         title: "Wetteranwendung",
         subtitle: "React + TypeScript",
         icon: "🌦",

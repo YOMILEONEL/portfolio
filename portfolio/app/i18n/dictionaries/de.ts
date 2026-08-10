@@ -204,7 +204,7 @@ export const de: Dictionary = {
     viewProjectLabel: "Zum Projekt",
     items: [
       {
-        title: "CVio",
+        title: "CVforYou",
         subtitle: "Lebenslauf-Generator",
         icon: "📄",
         category: "Fullstack / KI-gestützte Anwendung",

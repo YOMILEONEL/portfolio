@@ -204,7 +204,7 @@ export const en: Dictionary = {
     viewProjectLabel: "View Project",
     items: [
       {
-        title: "CVio",
+        title: "CVforYou",
         subtitle: "Resume Builder",
         icon: "📄",
         category: "Fullstack / AI-Powered App",

@@ -204,7 +204,7 @@ export const fr: Dictionary = {
     viewProjectLabel: "Voir le projet",
     items: [
       {
-        title: "CVio",
+        title: "CVforYou",
         subtitle: "Générateur de CV",
         icon: "📄",
         category: "Fullstack / Application assistée par IA",

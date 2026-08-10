@@ -228,7 +228,7 @@ export const fr: Dictionary = {
           "Puppeteer",
           "Vercel",
         ],
-        github: "https://cvio-nine.vercel.app",
+        github: "https://cvforyou.vercel.app",
       },
       {
         title: "Application météo",

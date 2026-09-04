@@ -209,7 +209,7 @@ export const en: Dictionary = {
         icon: "🧩",
         category: "Multi-Agent Systems / AI Code Generation",
         description:
-          "A multi-agent system that solves programming tasks through iterative code generation — instead of relying on a plain pass/fail signal, it diagnoses why a candidate solution is wrong using structural program metrics, then turns that diagnosis into targeted feedback for the next attempt. Built as a direct engineering follow-up to a Bachelor thesis on measuring program similarity beyond simple accuracy.",
+          "A multi-agent system that solves programming tasks through iterative code generation. Instead of relying on a plain pass/fail signal, it diagnoses why a candidate solution is wrong using structural program metrics, then turns that diagnosis into targeted feedback for the next attempt. Built as a direct engineering follow-up to a Bachelor thesis on measuring program similarity beyond simple accuracy.",
         features: [
           "Four cooperating agents (Planner, Coder, Tester, Critic) loop over benchmark tasks until the tests pass or the iteration budget runs out",
           "Critic agent tokenizes candidate and reference solutions via Python's AST and computes four structural similarity scores (POS, PPS, PSS, PES) from the thesis",
@@ -232,13 +232,13 @@ export const en: Dictionary = {
       },
       {
         title: "Beyond Accuracy",
-        subtitle: "Bachelor Thesis — Measuring Intelligence in Programming by Example",
+        subtitle: "Bachelor Thesis: Measuring Intelligence in Programming by Example",
         icon: "🎓",
         category: "Research / Program Synthesis",
         description:
           "A Bachelor thesis (TU Clausthal, 2026) arguing that judging a generated program only by whether it passes tests hides how close or how wrong a solution actually is. It introduces four token-based structural metrics that compare a generated program against a reference solution at the AST level, then applies them to evaluate two program synthesis systems.",
         features: [
-          "Four novel metrics — Program Operation Score, Program Position Score, Program Sequence Score and Program Edit Score — go beyond binary pass/fail evaluation",
+          "Four novel metrics (Program Operation Score, Program Position Score, Program Sequence Score and Program Edit Score) go beyond binary pass/fail evaluation",
           "Evaluated on a from-scratch, pure-Python reimplementation of DeepCoder and a fork of DreamCoder's wake-sleep program synthesis engine",
           "Worked examples and case studies show how the metrics distinguish \"nearly correct\" from \"fundamentally wrong\" solutions that a test suite alone cannot tell apart",
           "Identifies failure modes standard benchmarks miss, e.g. programs that pass all tests while ignoring their input entirely",

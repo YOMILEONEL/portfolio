@@ -204,6 +204,57 @@ export const en: Dictionary = {
     viewProjectLabel: "View Project",
     items: [
       {
+        title: "BeyondPass",
+        subtitle: "Multi-Agent Code Synthesis with Structural Feedback",
+        icon: "🧩",
+        category: "Multi-Agent Systems / AI Code Generation",
+        description:
+          "A multi-agent system that solves programming tasks through iterative code generation — instead of relying on a plain pass/fail signal, it diagnoses why a candidate solution is wrong using structural program metrics, then turns that diagnosis into targeted feedback for the next attempt. Built as a direct engineering follow-up to a Bachelor thesis on measuring program similarity beyond simple accuracy.",
+        features: [
+          "Four cooperating agents (Planner, Coder, Tester, Critic) loop over benchmark tasks until the tests pass or the iteration budget runs out",
+          "Critic agent tokenizes candidate and reference solutions via Python's AST and computes four structural similarity scores (POS, PPS, PSS, PES) from the thesis",
+          "Diagnosis-driven feedback (e.g. \"right operations, wrong order\") replaces generic pass/fail messages for the Coder's next attempt",
+          "All generated code runs in an isolated, network-disabled Docker sandbox with resource limits before evaluation",
+          "Controlled baseline-vs-structural comparison on HumanEval and MBPP, with a reporting tool and an interactive Streamlit dashboard",
+          "80+ automated tests (mocked LLM, synthetic fixtures) enforce a no-reference-leak constraint and reproduce the thesis' worked example exactly",
+        ],
+        technologies: [
+          "Python",
+          "Docker",
+          "Anthropic API",
+          "AST",
+          "Pydantic",
+          "pytest",
+          "Streamlit",
+          "GitHub Actions",
+        ],
+        github: "https://github.com/YOMILEONEL/BeyondPass",
+      },
+      {
+        title: "Beyond Accuracy",
+        subtitle: "Bachelor Thesis — Measuring Intelligence in Programming by Example",
+        icon: "🎓",
+        category: "Research / Program Synthesis",
+        description:
+          "A Bachelor thesis (TU Clausthal, 2026) arguing that judging a generated program only by whether it passes tests hides how close or how wrong a solution actually is. It introduces four token-based structural metrics that compare a generated program against a reference solution at the AST level, then applies them to evaluate two program synthesis systems.",
+        features: [
+          "Four novel metrics — Program Operation Score, Program Position Score, Program Sequence Score and Program Edit Score — go beyond binary pass/fail evaluation",
+          "Evaluated on a from-scratch, pure-Python reimplementation of DeepCoder and a fork of DreamCoder's wake-sleep program synthesis engine",
+          "Worked examples and case studies show how the metrics distinguish \"nearly correct\" from \"fundamentally wrong\" solutions that a test suite alone cannot tell apart",
+          "Identifies failure modes standard benchmarks miss, e.g. programs that pass all tests while ignoring their input entirely",
+          "Directly motivated the follow-up engineering project BeyondPass, which turns these metrics into real-time agent feedback",
+        ],
+        technologies: [
+          "Python",
+          "Program Synthesis",
+          "DreamCoder",
+          "DeepCoder",
+          "AST",
+          "Statistical Evaluation",
+        ],
+        github: "https://github.com/YOMILEONEL/BeyondPass/blob/main/docs/Thesis.pdf",
+      },
+      {
         title: "CVforYou",
         subtitle: "Resume Builder",
         icon: "📄",

@@ -204,6 +204,57 @@ export const de: Dictionary = {
     viewProjectLabel: "Zum Projekt",
     items: [
       {
+        title: "BeyondPass",
+        subtitle: "Multi-Agent-Code-Synthese mit strukturellem Feedback",
+        icon: "🧩",
+        category: "Multi-Agent-Systeme / KI-gestützte Codegenerierung",
+        description:
+          "Ein Multi-Agenten-System, das Programmieraufgaben durch iterative Codegenerierung löst — statt sich nur auf ein einfaches Bestanden/Nicht-bestanden-Signal zu verlassen, diagnostiziert es anhand struktureller Programm-Metriken, warum eine Kandidatenlösung falsch ist, und wandelt diese Diagnose in gezieltes Feedback für den nächsten Versuch um. Direkte technische Weiterführung einer Bachelorarbeit zur Messung von Programmähnlichkeit jenseits reiner Trefferquote.",
+        features: [
+          "Vier zusammenarbeitende Agenten (Planner, Coder, Tester, Critic) durchlaufen Benchmark-Aufgaben, bis die Tests bestehen oder das Iterationsbudget aufgebraucht ist",
+          "Der Critic-Agent tokenisiert Kandidaten- und Referenzlösung per Python-AST und berechnet vier strukturelle Ähnlichkeitswerte (POS, PPS, PSS, PES) aus der Bachelorarbeit",
+          "Diagnosegetriebenes Feedback (z. B. \"richtige Operationen, falsche Reihenfolge\") ersetzt generische Bestanden/Nicht-bestanden-Meldungen für den nächsten Coder-Versuch",
+          "Sämtlicher generierter Code läuft vor der Auswertung in einer isolierten, netzwerklosen Docker-Sandbox mit Ressourcenlimits",
+          "Kontrollierter Vergleich Baseline vs. strukturelles Feedback auf HumanEval und MBPP, inklusive Reporting-Tool und interaktivem Streamlit-Dashboard",
+          "Über 80 automatisierte Tests (gemocktes LLM, synthetische Fixtures) erzwingen den No-Reference-Leak und reproduzieren das Rechenbeispiel der Bachelorarbeit exakt",
+        ],
+        technologies: [
+          "Python",
+          "Docker",
+          "Anthropic API",
+          "AST",
+          "Pydantic",
+          "pytest",
+          "Streamlit",
+          "GitHub Actions",
+        ],
+        github: "https://github.com/YOMILEONEL/BeyondPass",
+      },
+      {
+        title: "Beyond Accuracy",
+        subtitle: "Bachelorarbeit — Measuring Intelligence in Programming by Example",
+        icon: "🎓",
+        category: "Forschung / Program Synthesis",
+        description:
+          "Eine Bachelorarbeit (TU Clausthal, 2026), die argumentiert, dass die reine Bewertung eines generierten Programms anhand von Testergebnissen verschleiert, wie nah oder wie falsch eine Lösung tatsächlich ist. Sie führt vier tokenbasierte strukturelle Metriken ein, die ein generiertes Programm auf AST-Ebene mit einer Referenzlösung vergleichen, und wendet sie zur Evaluation zweier Program-Synthesis-Systeme an.",
+        features: [
+          "Vier neue Metriken — Program Operation Score, Program Position Score, Program Sequence Score und Program Edit Score — gehen über binäres Bestanden/Nicht-bestanden hinaus",
+          "Evaluation anhand einer von Grund auf neu implementierten, reinen Python-Version von DeepCoder sowie eines Forks der Wake-Sleep-Program-Synthesis-Engine DreamCoder",
+          "Rechenbeispiele und Fallstudien zeigen, wie die Metriken zwischen \"fast richtig\" und \"grundlegend falsch\" unterscheiden — eine Differenzierung, die eine reine Testsuite nicht leisten kann",
+          "Deckt Fehlerarten auf, die Standard-Benchmarks übersehen, z. B. Programme, die alle Tests bestehen, ohne ihre Eingabe überhaupt zu nutzen",
+          "Direkter Ausgangspunkt für das Folgeprojekt BeyondPass, das diese Metriken in Echtzeit-Feedback für Agenten umsetzt",
+        ],
+        technologies: [
+          "Python",
+          "Program Synthesis",
+          "DreamCoder",
+          "DeepCoder",
+          "AST",
+          "Statistische Auswertung",
+        ],
+        github: "https://github.com/YOMILEONEL/BeyondPass/blob/main/docs/Thesis.pdf",
+      },
+      {
         title: "CVforYou",
         subtitle: "Lebenslauf-Generator",
         icon: "📄",

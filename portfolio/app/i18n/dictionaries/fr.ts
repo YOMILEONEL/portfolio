@@ -204,6 +204,57 @@ export const fr: Dictionary = {
     viewProjectLabel: "Voir le projet",
     items: [
       {
+        title: "BeyondPass",
+        subtitle: "Synthèse de code multi-agents avec feedback structurel",
+        icon: "🧩",
+        category: "Systèmes multi-agents / Génération de code par IA",
+        description:
+          "Un système multi-agents qui résout des tâches de programmation par génération de code itérative — plutôt que de se fier à un simple signal réussite/échec, il diagnostique pourquoi une solution candidate est fausse à l'aide de métriques structurelles de programme, puis transforme ce diagnostic en feedback ciblé pour la tentative suivante. Prolongement technique direct d'un mémoire de licence sur la mesure de similarité de programmes au-delà de la simple exactitude.",
+        features: [
+          "Quatre agents coopérants (Planner, Coder, Tester, Critic) itèrent sur des tâches de benchmark jusqu'à la réussite des tests ou l'épuisement du budget d'itérations",
+          "L'agent Critic tokenise la solution candidate et la solution de référence via l'AST Python et calcule quatre scores de similarité structurelle (POS, PPS, PSS, PES) issus du mémoire de licence",
+          "Un feedback piloté par diagnostic (par ex. \"bonnes opérations, mauvais ordre\") remplace les messages génériques de réussite/échec pour la prochaine tentative du Coder",
+          "Tout le code généré s'exécute dans un sandbox Docker isolé, sans accès réseau et avec des limites de ressources, avant évaluation",
+          "Comparaison contrôlée baseline vs. feedback structurel sur HumanEval et MBPP, avec un outil de reporting et un tableau de bord interactif Streamlit",
+          "Plus de 80 tests automatisés (LLM simulé, fixtures synthétiques) garantissent l'absence de fuite de la référence et reproduisent exactement l'exemple du mémoire",
+        ],
+        technologies: [
+          "Python",
+          "Docker",
+          "API Anthropic",
+          "AST",
+          "Pydantic",
+          "pytest",
+          "Streamlit",
+          "GitHub Actions",
+        ],
+        github: "https://github.com/YOMILEONEL/BeyondPass",
+      },
+      {
+        title: "Beyond Accuracy",
+        subtitle: "Mémoire de licence — Measuring Intelligence in Programming by Example",
+        icon: "🎓",
+        category: "Recherche / Synthèse de programmes",
+        description:
+          "Un mémoire de licence (Université Technique de Clausthal, 2026) qui soutient que juger un programme généré uniquement sur la réussite des tests masque à quel point une solution est proche ou éloignée de la bonne réponse. Il introduit quatre métriques structurelles basées sur les tokens qui comparent un programme généré à une solution de référence au niveau de l'AST, puis les applique à l'évaluation de deux systèmes de synthèse de programmes.",
+        features: [
+          "Quatre nouvelles métriques — Program Operation Score, Program Position Score, Program Sequence Score et Program Edit Score — dépassent l'évaluation binaire réussite/échec",
+          "Évaluation sur une réimplémentation en Python pur de DeepCoder ainsi que sur un fork du moteur de synthèse wake-sleep de DreamCoder",
+          "Des exemples détaillés et études de cas montrent comment les métriques distinguent une solution \"presque correcte\" d'une solution \"fondamentalement fausse\" — une nuance qu'une suite de tests seule ne peut pas capturer",
+          "Met en évidence des modes d'échec que les benchmarks standards ne détectent pas, par ex. des programmes qui réussissent tous les tests sans jamais utiliser leur entrée",
+          "Point de départ direct du projet de suite BeyondPass, qui transforme ces métriques en feedback en temps réel pour des agents",
+        ],
+        technologies: [
+          "Python",
+          "Synthèse de programmes",
+          "DreamCoder",
+          "DeepCoder",
+          "AST",
+          "Évaluation statistique",
+        ],
+        github: "https://github.com/YOMILEONEL/BeyondPass/blob/main/docs/Thesis.pdf",
+      },
+      {
         title: "CVforYou",
         subtitle: "Générateur de CV",
         icon: "📄",

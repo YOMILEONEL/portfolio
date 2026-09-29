@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { languages, useLanguage } from "../i18n/LanguageContext";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const languageLabels: Record<string, string> = {
   de: "DE",
@@ -76,16 +77,20 @@ export function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Button */}
-        <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 text-white md:hidden"
-          onClick={() => setIsOpen((value) => !value)}
-          aria-label={dict.nav.menuAria}
-          aria-expanded={isOpen}
-        >
-          {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
-        </button>
+        {/* Mobile: language switcher + menu button */}
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitcher />
+
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 text-white"
+            onClick={() => setIsOpen((value) => !value)}
+            aria-label={dict.nav.menuAria}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
@@ -102,24 +107,6 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-
-            <div className="flex items-center justify-center gap-1 rounded-xl border border-white/10 bg-white/5 p-1">
-              {languages.map((lang) => (
-                <button
-                  key={lang}
-                  type="button"
-                  onClick={() => setLanguage(lang)}
-                  aria-pressed={language === lang}
-                  className={`flex-1 rounded-lg px-2.5 py-2 text-sm font-semibold transition ${
-                    language === lang
-                      ? "bg-blue-600 text-white"
-                      : "text-gray-300 hover:text-white"
-                  }`}
-                >
-                  {languageLabels[lang]}
-                </button>
-              ))}
-            </div>
 
             <a
               href={dict.resumeUrl}

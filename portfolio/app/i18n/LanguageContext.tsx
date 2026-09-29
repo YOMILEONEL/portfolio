@@ -12,9 +12,9 @@ import { en } from "./dictionaries/en";
 import { fr } from "./dictionaries/fr";
 import type { Dictionary } from "./dictionaries/types";
 
-export type Language = "de" | "en" | "fr";
+export type Language = "en" | "de" | "fr";
 
-export const languages: Language[] = ["de", "en", "fr"];
+export const languages: Language[] = ["en", "de", "fr"];
 
 const dictionaries: Record<Language, Dictionary> = { de, en, fr };
 
@@ -29,14 +29,14 @@ type LanguageContextValue = {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  // Always start at "de" so the client's first render matches the
-  // server-rendered HTML (which has no access to localStorage), then
-  // sync the persisted preference right after mount. Reading
-  // localStorage in the initializer instead would make the client's
-  // first render diverge from the server output and trigger a React
-  // hydration-mismatch error for any visitor who previously chose
-  // en/fr.
-  const [language, setLanguageState] = useState<Language>("de");
+  // Always start at "en" (the site's primary language) so the client's
+  // first render matches the server-rendered HTML (which has no access
+  // to localStorage), then sync the persisted preference right after
+  // mount. Reading localStorage in the initializer instead would make
+  // the client's first render diverge from the server output and
+  // trigger a React hydration-mismatch error for any visitor who
+  // previously chose de/fr.
+  const [language, setLanguageState] = useState<Language>("en");
 
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY);

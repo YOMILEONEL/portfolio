@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Steve Leonel Portfolio",
   description:
-    "Portfolio von Steve Leonel Yomi Mbiakop – Fullstack Developer, KI-Enthusiast und Informatikstudent.",
+    "Portfolio of Steve Leonel Yomi Mbiakop – Fullstack Developer, AI enthusiast and computer science student.",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="de"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">

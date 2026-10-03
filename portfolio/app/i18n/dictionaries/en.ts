@@ -4,7 +4,7 @@ export const en: Dictionary = {
   meta: {
     title: "Steve Leonel Portfolio",
     description:
-      "Portfolio of Steve Leonel Yomi Mbiakop – Fullstack Developer, AI Enthusiast and Computer Science Student.",
+      "Portfolio of Steve Leonel Yomi Mbiakop – Fullstack Developer, AI Enthusiast and M.Sc. Computer Science Student.",
   },
   resumeUrl: "/resume_en.pdf",
   nav: {
@@ -23,7 +23,7 @@ export const en: Dictionary = {
     greetingPrefix: "Hi, I'm",
     name: "Steve Leonel Yomi Mbiakop",
     paragraph1:
-      "I'm studying Computer Science at Clausthal University of Technology, building modern, scalable software solutions with a focus on fullstack web development, artificial intelligence and clean software architecture.",
+      "I hold a B.Sc. in Computer Science from Clausthal University of Technology and I'm currently pursuing a Master's degree at the University of Kassel. Alongside my studies, I build modern, scalable software solutions with a focus on fullstack web development, artificial intelligence and clean software architecture.",
     paragraph2:
       "My main focus areas are Java, Spring Boot, React, Next.js, TypeScript, databases, Docker and REST APIs. I'm also interested in automation, n8n, the OpenAI API and intelligent systems for real-world use cases.",
     skills: [
@@ -43,7 +43,7 @@ export const en: Dictionary = {
     eyebrow: "Who I Am",
     title: "About Me",
     intro:
-      "I'm Steve Leonel Yomi Mbiakop, a Computer Science student (B.Sc., Clausthal University of Technology) with hands-on experience building and operating production fullstack systems: Spring Boot and Next.js backends and frontends, PostgreSQL with Flyway, Stripe and RabbitMQ integrations, and Docker/CI-CD pipelines. I combine solid software engineering fundamentals with a research background in program synthesis, and I'm open to new software engineering opportunities from November 2026 onward.",
+      "I'm Steve Leonel Yomi Mbiakop, a B.Sc. Computer Science graduate (Clausthal University of Technology) currently pursuing a Master's degree at the University of Kassel, with hands-on experience building and operating production fullstack systems: Spring Boot and Next.js backends and frontends, PostgreSQL with Flyway, Stripe and RabbitMQ integrations, and Docker/CI-CD pipelines. I combine solid software engineering fundamentals with a research background in program synthesis, and I'm looking for a Software Engineer / Fullstack Developer role from November 2026.",
     motivationTitle: "My Motivation",
     motivation1:
       "My goal is to build robust, user-friendly applications that solve real problems. I find it especially exciting to combine classic software development with artificial intelligence, automation and scalable web architecture.",
@@ -53,8 +53,8 @@ export const en: Dictionary = {
       "I gain hands-on experience in projects using Spring Boot, Next.js, TypeScript, Docker, REST APIs, MySQL and PostgreSQL, as well as automations with n8n and the OpenAI API.",
     highlights: [
       {
-        title: "Computer Science Student",
-        text: "B.Sc. Computer Science at Clausthal University of Technology, focused on software engineering, algorithms, databases and distributed systems.",
+        title: "Computer Science (B.Sc. & M.Sc.)",
+        text: "B.Sc. Computer Science from Clausthal University of Technology, currently pursuing a Master's at the University of Kassel. Focus: software engineering, algorithms, databases and distributed systems.",
       },
       {
         title: "Fullstack Development",

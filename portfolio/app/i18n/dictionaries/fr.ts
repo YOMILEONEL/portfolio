@@ -4,7 +4,7 @@ export const fr: Dictionary = {
   meta: {
     title: "Portfolio de Steve Leonel",
     description:
-      "Portfolio de Steve Leonel Yomi Mbiakop – Développeur Fullstack, Passionné d'IA et Étudiant en informatique.",
+      "Portfolio de Steve Leonel Yomi Mbiakop – Développeur Fullstack, Passionné d'IA et Étudiant en Master informatique.",
   },
   resumeUrl: "/cv_fr.pdf",
   nav: {
@@ -23,7 +23,7 @@ export const fr: Dictionary = {
     greetingPrefix: "Bonjour, je suis",
     name: "Steve Leonel Yomi Mbiakop",
     paragraph1:
-      "J'étudie l'informatique à l'Université Technique de Clausthal et je développe des solutions logicielles modernes et évolutives, avec un accent sur le développement web fullstack, l'intelligence artificielle et une architecture logicielle propre.",
+      "Je suis titulaire d'une Licence en informatique de l'Université Technique de Clausthal et je poursuis actuellement un Master à l'Université de Kassel. En parallèle, je développe des solutions logicielles modernes et évolutives, avec un accent sur le développement web fullstack, l'intelligence artificielle et une architecture logicielle propre.",
     paragraph2:
       "Mes domaines de prédilection sont Java, Spring Boot, React, Next.js, TypeScript, les bases de données, Docker et les API REST. Je m'intéresse également à l'automatisation, n8n, l'API OpenAI et aux systèmes intelligents pour des cas d'usage concrets.",
     skills: [
@@ -43,7 +43,7 @@ export const fr: Dictionary = {
     eyebrow: "Qui je suis",
     title: "À propos de moi",
     intro:
-      "Je suis Steve Leonel Yomi Mbiakop, étudiant en informatique (Licence, Université Technique de Clausthal) avec une expérience concrète dans la conception et l'exploitation de systèmes fullstack en production : backends et frontends Spring Boot et Next.js, PostgreSQL avec Flyway, intégrations Stripe et RabbitMQ, ainsi que des pipelines Docker/CI-CD. J'allie des bases solides en génie logiciel à une expérience de recherche en synthèse de programmes, et je suis disponible pour de nouvelles opportunités en développement logiciel à partir de novembre 2026.",
+      "Je suis Steve Leonel Yomi Mbiakop, diplômé en informatique (Licence, Université Technique de Clausthal) et actuellement en Master à l'Université de Kassel, avec une expérience concrète dans la conception et l'exploitation de systèmes fullstack en production : backends et frontends Spring Boot et Next.js, PostgreSQL avec Flyway, intégrations Stripe et RabbitMQ, ainsi que des pipelines Docker/CI-CD. J'allie des bases solides en génie logiciel à une expérience de recherche en synthèse de programmes, et je recherche un poste de Software Engineer / Développeur Fullstack à partir de novembre 2026.",
     motivationTitle: "Ma motivation",
     motivation1:
       "Mon objectif est de développer des applications robustes et conviviales qui résolvent de vrais problèmes. Je trouve particulièrement passionnant de relier le développement logiciel classique à l'intelligence artificielle, à l'automatisation et à une architecture web évolutive.",
@@ -53,8 +53,8 @@ export const fr: Dictionary = {
       "J'acquiers une expérience pratique notamment dans des projets utilisant Spring Boot, Next.js, TypeScript, Docker, des API REST, MySQL et PostgreSQL, ainsi que des automatisations avec n8n et l'API OpenAI.",
     highlights: [
       {
-        title: "Étudiant en informatique",
-        text: "Licence en informatique à l'Université Technique de Clausthal, avec un accent sur le génie logiciel, les algorithmes, les bases de données et les systèmes distribués.",
+        title: "Informatique (Licence & Master)",
+        text: "Licence en informatique de l'Université Technique de Clausthal, Master en cours à l'Université de Kassel. Axes : génie logiciel, algorithmes, bases de données et systèmes distribués.",
       },
       {
         title: "Développement Fullstack",

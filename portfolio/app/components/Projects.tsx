@@ -1,11 +1,20 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
+import { useCallback, useState } from "react";
+import { MdOpenInFull } from "react-icons/md";
 import { useLanguage } from "../i18n/LanguageContext";
+import type { ArchitectureDiagram } from "../i18n/dictionaries/types";
+import { ArchitectureLightbox } from "./ArchitectureLightbox";
+
+type SelectedDiagram = { title: string; diagram: ArchitectureDiagram };
 
 export function Projects() {
   const { dict } = useLanguage();
   const { projects } = dict;
+  const [selected, setSelected] = useState<SelectedDiagram | null>(null);
+  const closeLightbox = useCallback(() => setSelected(null), []);
 
   return (
     <section
@@ -112,20 +121,77 @@ export function Projects() {
                 </div>
               </div>
 
-              <motion.a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white shadow-lg transition hover:bg-blue-700"
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                {projects.viewProjectLabel}
-              </motion.a>
+              <div className="flex flex-wrap items-center gap-4">
+                <motion.a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white shadow-lg transition hover:bg-blue-700"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {projects.viewProjectLabel}
+                </motion.a>
+
+                {project.architecture && (
+                  <motion.button
+                    type="button"
+                    onClick={() =>
+                      project.architecture &&
+                      setSelected({
+                        title: `${project.title} · ${projects.architectureLabel}`,
+                        diagram: project.architecture,
+                      })
+                    }
+                    aria-label={`${projects.architectureLabel}: ${project.title}`}
+                    className="group/arch inline-flex items-center gap-3 rounded-xl border border-white/15 bg-white/5 py-1.5 pl-1.5 pr-4 text-left transition hover:border-blue-400/50 hover:bg-white/10"
+                    whileHover={{ scale: 1.04 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="relative h-11 w-16 flex-none overflow-hidden rounded-lg border border-white/10">
+                      <Image
+                        src={project.architecture.src}
+                        alt=""
+                        fill
+                        sizes="64px"
+                        className="object-cover transition duration-300 group-hover/arch:scale-110"
+                      />
+                    </span>
+
+                    <span className="flex flex-col leading-tight">
+                      <span className="text-sm font-semibold text-white">
+                        {projects.architectureLabel}
+                      </span>
+                      <span className="text-xs text-gray-400">
+                        {projects.enlargeHint}
+                      </span>
+                    </span>
+
+                    <MdOpenInFull
+                      size={16}
+                      className="ml-1 text-blue-300 transition group-hover/arch:text-white"
+                    />
+                  </motion.button>
+                )}
+              </div>
             </motion.article>
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {selected && (
+          <ArchitectureLightbox
+            key={selected.diagram.src}
+            diagram={selected.diagram}
+            title={selected.title}
+            closeLabel={projects.closeLabel}
+            zoomInLabel={projects.zoomInLabel}
+            zoomOutLabel={projects.zoomOutLabel}
+            onClose={closeLightbox}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }

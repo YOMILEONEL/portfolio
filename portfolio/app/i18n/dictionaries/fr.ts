@@ -1,3 +1,4 @@
+import { architectureDiagrams } from "./architecture";
 import type { Dictionary } from "./types";
 
 export const fr: Dictionary = {
@@ -204,6 +205,11 @@ export const fr: Dictionary = {
     coreFeaturesLabel: "Fonctionnalités clés",
     technologiesLabel: "Technologies",
     viewProjectLabel: "Voir le projet",
+    architectureLabel: "Architecture",
+    enlargeHint: "Cliquer pour agrandir",
+    closeLabel: "Fermer",
+    zoomInLabel: "Zoomer",
+    zoomOutLabel: "Dézoomer",
     items: [
       {
         title: "BeyondPass",
@@ -231,6 +237,7 @@ export const fr: Dictionary = {
           "GitHub Actions",
         ],
         github: "https://github.com/YOMILEONEL/BeyondPass",
+        architecture: architectureDiagrams.beyondpass,
       },
       {
         title: "Beyond Accuracy",
@@ -295,6 +302,7 @@ export const fr: Dictionary = {
           "GitHub Actions",
         ],
         github: "https://github.com/YOMILEONEL/room_booking_system",
+        architecture: architectureDiagrams.spacio,
       },
       {
         title: "CVforYou",
@@ -322,6 +330,7 @@ export const fr: Dictionary = {
           "Vercel",
         ],
         github: "https://cvforyou.vercel.app",
+        architecture: architectureDiagrams.cvforyou,
       },
       {
         title: "FriendTasks",
@@ -350,6 +359,7 @@ export const fr: Dictionary = {
           "Vercel",
         ],
         github: "https://friendtasks.vercel.app",
+        architecture: architectureDiagrams.friendtasks,
       },
       {
         title: "Jeu de dames avec mode multijoueur",

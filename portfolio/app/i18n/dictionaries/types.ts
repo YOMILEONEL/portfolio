@@ -8,6 +8,12 @@ export type ExperienceItem = {
   technologies: string[];
 };
 
+export type ArchitectureDiagram = {
+  src: string;
+  width: number;
+  height: number;
+};
+
 export type ProjectItem = {
   title: string;
   subtitle: string;
@@ -17,6 +23,7 @@ export type ProjectItem = {
   features: string[];
   technologies: string[];
   github: string;
+  architecture?: ArchitectureDiagram;
 };
 
 export type Highlight = {
@@ -82,6 +89,11 @@ export type Dictionary = {
     coreFeaturesLabel: string;
     technologiesLabel: string;
     viewProjectLabel: string;
+    architectureLabel: string;
+    enlargeHint: string;
+    closeLabel: string;
+    zoomInLabel: string;
+    zoomOutLabel: string;
     items: ProjectItem[];
   };
   contact: {

@@ -1,3 +1,4 @@
+import { architectureDiagrams } from "./architecture";
 import type { Dictionary } from "./types";
 
 export const en: Dictionary = {
@@ -204,6 +205,11 @@ export const en: Dictionary = {
     coreFeaturesLabel: "Core Features",
     technologiesLabel: "Technologies",
     viewProjectLabel: "View Project",
+    architectureLabel: "Architecture",
+    enlargeHint: "Click to enlarge",
+    closeLabel: "Close",
+    zoomInLabel: "Zoom in",
+    zoomOutLabel: "Zoom out",
     items: [
       {
         title: "BeyondPass",
@@ -231,6 +237,7 @@ export const en: Dictionary = {
           "GitHub Actions",
         ],
         github: "https://github.com/YOMILEONEL/BeyondPass",
+        architecture: architectureDiagrams.beyondpass,
       },
       {
         title: "Beyond Accuracy",
@@ -295,6 +302,7 @@ export const en: Dictionary = {
           "GitHub Actions",
         ],
         github: "https://github.com/YOMILEONEL/room_booking_system",
+        architecture: architectureDiagrams.spacio,
       },
       {
         title: "CVforYou",
@@ -322,6 +330,7 @@ export const en: Dictionary = {
           "Vercel",
         ],
         github: "https://cvforyou.vercel.app",
+        architecture: architectureDiagrams.cvforyou,
       },
       {
         title: "FriendTasks",
@@ -350,6 +359,7 @@ export const en: Dictionary = {
           "Vercel",
         ],
         github: "https://friendtasks.vercel.app",
+        architecture: architectureDiagrams.friendtasks,
       },
       {
         title: "Checkers Game with Multiplayer Mode",

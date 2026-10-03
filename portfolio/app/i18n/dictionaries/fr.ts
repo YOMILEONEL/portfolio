@@ -43,7 +43,7 @@ export const fr: Dictionary = {
     eyebrow: "Qui je suis",
     title: "À propos de moi",
     intro:
-      "Je suis Steve Leonel Yomi Mbiakop, diplômé en informatique (Licence, Université Technique de Clausthal) et actuellement en Master à l'Université de Kassel, avec une expérience concrète dans la conception et l'exploitation de systèmes fullstack en production : backends et frontends Spring Boot et Next.js, PostgreSQL avec Flyway, intégrations Stripe et RabbitMQ, ainsi que des pipelines Docker/CI-CD. J'allie des bases solides en génie logiciel à une expérience de recherche en synthèse de programmes, et je recherche un poste de Software Engineer / Développeur Fullstack à partir de novembre 2026.",
+      "Je suis Steve Leonel Yomi Mbiakop, diplômé en informatique (Licence, Université Technique de Clausthal) et actuellement en Master à l'Université de Kassel, avec une expérience concrète dans la conception et l'exploitation de systèmes fullstack en production : backends Spring Boot, frontends Next.js, PostgreSQL avec Flyway, intégrations Stripe et RabbitMQ, ainsi que des pipelines Docker/CI-CD. J'allie des bases solides en génie logiciel à une expérience de recherche en synthèse de programmes, et je recherche un poste de Software Engineer / Développeur Fullstack à partir de novembre 2026.",
     motivationTitle: "Ma motivation",
     motivation1:
       "Mon objectif est de développer des applications robustes et conviviales qui résolvent de vrais problèmes. Je trouve particulièrement passionnant de relier le développement logiciel classique à l'intelligence artificielle, à l'automatisation et à une architecture web évolutive.",

@@ -19,7 +19,7 @@ export const fr: Dictionary = {
     menuAria: "Ouvrir ou fermer la navigation",
   },
   hero: {
-    eyebrow: "Développeur Fullstack · Passionné d'IA · Étudiant en informatique",
+    eyebrow: "Développeur Fullstack · Java & Spring Boot · Next.js",
     greetingPrefix: "Bonjour, je suis",
     name: "Steve Leonel Yomi Mbiakop",
     paragraph1:
@@ -43,7 +43,7 @@ export const fr: Dictionary = {
     eyebrow: "Qui je suis",
     title: "À propos de moi",
     intro:
-      "Je suis Steve Leonel Yomi Mbiakop, étudiant en informatique, développeur fullstack et passionné d'IA basé en Allemagne. Je développe des solutions logicielles alliant précision technique, architecture moderne et applicabilité concrète.",
+      "Je suis Steve Leonel Yomi Mbiakop, étudiant en informatique (Licence, Université Technique de Clausthal) avec une expérience concrète dans la conception et l'exploitation de systèmes fullstack en production : backends et frontends Spring Boot et Next.js, PostgreSQL avec Flyway, intégrations Stripe et RabbitMQ, ainsi que des pipelines Docker/CI-CD. J'allie des bases solides en génie logiciel à une expérience de recherche en synthèse de programmes, et je suis disponible pour de nouvelles opportunités en développement logiciel à partir de novembre 2026.",
     motivationTitle: "Ma motivation",
     motivation1:
       "Mon objectif est de développer des applications robustes et conviviales qui résolvent de vrais problèmes. Je trouve particulièrement passionnant de relier le développement logiciel classique à l'intelligence artificielle, à l'automatisation et à une architecture web évolutive.",

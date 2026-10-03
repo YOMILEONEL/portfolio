@@ -19,7 +19,7 @@ export const en: Dictionary = {
     menuAria: "Open or close navigation",
   },
   hero: {
-    eyebrow: "Fullstack Developer · AI Enthusiast · Computer Science Student",
+    eyebrow: "Fullstack Developer · Java & Spring Boot · Next.js",
     greetingPrefix: "Hi, I'm",
     name: "Steve Leonel Yomi Mbiakop",
     paragraph1:
@@ -43,7 +43,7 @@ export const en: Dictionary = {
     eyebrow: "Who I Am",
     title: "About Me",
     intro:
-      "I'm Steve Leonel Yomi Mbiakop, a Computer Science student, fullstack developer and AI enthusiast based in Germany. I build software solutions that combine technical precision, modern architecture and practical usability.",
+      "I'm Steve Leonel Yomi Mbiakop, a Computer Science student (B.Sc., Clausthal University of Technology) with hands-on experience building and operating production fullstack systems: Spring Boot and Next.js backends and frontends, PostgreSQL with Flyway, Stripe and RabbitMQ integrations, and Docker/CI-CD pipelines. I combine solid software engineering fundamentals with a research background in program synthesis, and I'm open to new software engineering opportunities from November 2026 onward.",
     motivationTitle: "My Motivation",
     motivation1:
       "My goal is to build robust, user-friendly applications that solve real problems. I find it especially exciting to combine classic software development with artificial intelligence, automation and scalable web architecture.",

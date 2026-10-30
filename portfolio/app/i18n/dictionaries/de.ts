@@ -24,7 +24,7 @@ export const de: Dictionary = {
     greetingPrefix: "Hallo, ich bin",
     name: "Steve Leonel Yomi Mbiakop",
     paragraph1:
-      "Ich habe Informatik an der Technischen Universität Clausthal abgeschlossen (B.Sc.) und studiere aktuell im Master an der Universität Kassel. Daneben entwickle ich moderne, skalierbare Softwarelösungen mit Fokus auf Fullstack-Webentwicklung, künstliche Intelligenz und saubere Softwarearchitektur.",
+      "Ich habe Informatik an der Technischen Universität Clausthal abgeschlossen (B.Sc.) und studiere dort aktuell im Master. Daneben entwickle ich moderne, skalierbare Softwarelösungen mit Fokus auf Fullstack-Webentwicklung, künstliche Intelligenz und saubere Softwarearchitektur.",
     paragraph2:
       "Meine Schwerpunkte liegen in Java, Spring Boot, React, Next.js, TypeScript, Datenbanken, Docker und REST-APIs. Zusätzlich beschäftige ich mich mit Automatisierung, n8n, OpenAI-API und intelligenten Systemen für reale Anwendungsfälle.",
     skills: [
@@ -44,7 +44,7 @@ export const de: Dictionary = {
     eyebrow: "Wer ich bin",
     title: "Über mich",
     intro:
-      "Ich bin Steve Leonel Yomi Mbiakop, B.Sc.-Absolvent der Informatik (Technische Universität Clausthal) und Masterstudent an der Universität Kassel, mit praktischer Erfahrung im Aufbau und Betrieb produktiver Fullstack-Systeme: Backends mit Spring Boot, Frontends mit Next.js, PostgreSQL mit Flyway, Stripe- und RabbitMQ-Integrationen sowie Docker/CI-CD-Pipelines. Ich verbinde solide Software-Engineering-Grundlagen mit einem Forschungshintergrund in Program Synthesis und suche ab November 2026 eine Stelle als Software Engineer / Fullstack Developer.",
+      "Ich bin Steve Leonel Yomi Mbiakop, B.Sc.-Absolvent der Informatik und Masterstudent an der Technischen Universität Clausthal, mit praktischer Erfahrung im Aufbau und Betrieb produktiver Fullstack-Systeme: Backends mit Spring Boot, Frontends mit Next.js, PostgreSQL mit Flyway, Stripe- und RabbitMQ-Integrationen sowie Docker/CI-CD-Pipelines. Ich verbinde solide Software-Engineering-Grundlagen mit einem Forschungshintergrund in Program Synthesis und suche ab November 2026 eine Stelle als Software Engineer / Fullstack Developer.",
     motivationTitle: "Meine Motivation",
     motivation1:
       "Mein Ziel ist es, robuste und benutzerfreundliche Anwendungen zu entwickeln, die echte Probleme lösen. Besonders spannend finde ich die Verbindung von klassischer Softwareentwicklung mit künstlicher Intelligenz, Automatisierung und skalierbarer Webarchitektur.",
@@ -55,7 +55,7 @@ export const de: Dictionary = {
     highlights: [
       {
         title: "Informatik (B.Sc. & M.Sc.)",
-        text: "B.Sc. Informatik an der Technischen Universität Clausthal, aktuell Masterstudium an der Universität Kassel. Schwerpunkte: Softwaretechnik, Algorithmen, Datenbanken und verteilte Systeme.",
+        text: "B.Sc. Informatik an der Technischen Universität Clausthal, dort aktuell im Masterstudium. Schwerpunkte: Softwaretechnik, Algorithmen, Datenbanken und verteilte Systeme.",
       },
       {
         title: "Fullstack-Entwicklung",

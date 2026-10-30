@@ -24,7 +24,7 @@ export const fr: Dictionary = {
     greetingPrefix: "Bonjour, je suis",
     name: "Steve Leonel Yomi Mbiakop",
     paragraph1:
-      "Je suis titulaire d'une Licence en informatique de l'Université Technique de Clausthal et je poursuis actuellement un Master à l'Université de Kassel. En parallèle, je développe des solutions logicielles modernes et évolutives, avec un accent sur le développement web fullstack, l'intelligence artificielle et une architecture logicielle propre.",
+      "Je suis titulaire d'une Licence en informatique de l'Université Technique de Clausthal, où je poursuis actuellement un Master. En parallèle, je développe des solutions logicielles modernes et évolutives, avec un accent sur le développement web fullstack, l'intelligence artificielle et une architecture logicielle propre.",
     paragraph2:
       "Mes domaines de prédilection sont Java, Spring Boot, React, Next.js, TypeScript, les bases de données, Docker et les API REST. Je m'intéresse également à l'automatisation, n8n, l'API OpenAI et aux systèmes intelligents pour des cas d'usage concrets.",
     skills: [
@@ -44,7 +44,7 @@ export const fr: Dictionary = {
     eyebrow: "Qui je suis",
     title: "À propos de moi",
     intro:
-      "Je suis Steve Leonel Yomi Mbiakop, diplômé en informatique (Licence, Université Technique de Clausthal) et actuellement en Master à l'Université de Kassel, avec une expérience concrète dans la conception et l'exploitation de systèmes fullstack en production : backends Spring Boot, frontends Next.js, PostgreSQL avec Flyway, intégrations Stripe et RabbitMQ, ainsi que des pipelines Docker/CI-CD. J'allie des bases solides en génie logiciel à une expérience de recherche en synthèse de programmes, et je recherche un poste de Software Engineer / Développeur Fullstack à partir de novembre 2026.",
+      "Je suis Steve Leonel Yomi Mbiakop, diplômé en informatique (Licence) et actuellement en Master à l'Université Technique de Clausthal, avec une expérience concrète dans la conception et l'exploitation de systèmes fullstack en production : backends Spring Boot, frontends Next.js, PostgreSQL avec Flyway, intégrations Stripe et RabbitMQ, ainsi que des pipelines Docker/CI-CD. J'allie des bases solides en génie logiciel à une expérience de recherche en synthèse de programmes, et je recherche un poste de Software Engineer / Développeur Fullstack à partir de novembre 2026.",
     motivationTitle: "Ma motivation",
     motivation1:
       "Mon objectif est de développer des applications robustes et conviviales qui résolvent de vrais problèmes. Je trouve particulièrement passionnant de relier le développement logiciel classique à l'intelligence artificielle, à l'automatisation et à une architecture web évolutive.",
@@ -55,7 +55,7 @@ export const fr: Dictionary = {
     highlights: [
       {
         title: "Informatique (Licence & Master)",
-        text: "Licence en informatique de l'Université Technique de Clausthal, Master en cours à l'Université de Kassel. Axes : génie logiciel, algorithmes, bases de données et systèmes distribués.",
+        text: "Licence en informatique de l'Université Technique de Clausthal, où je poursuis actuellement un Master. Axes : génie logiciel, algorithmes, bases de données et systèmes distribués.",
       },
       {
         title: "Développement Fullstack",

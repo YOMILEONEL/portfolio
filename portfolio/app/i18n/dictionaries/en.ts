@@ -24,7 +24,7 @@ export const en: Dictionary = {
     greetingPrefix: "Hi, I'm",
     name: "Steve Leonel Yomi Mbiakop",
     paragraph1:
-      "I hold a B.Sc. in Computer Science from Clausthal University of Technology and I'm currently pursuing a Master's degree at the University of Kassel. Alongside my studies, I build modern, scalable software solutions with a focus on fullstack web development, artificial intelligence and clean software architecture.",
+      "I hold a B.Sc. in Computer Science from Clausthal University of Technology, where I'm currently pursuing my Master's degree. Alongside my studies, I build modern, scalable software solutions with a focus on fullstack web development, artificial intelligence and clean software architecture.",
     paragraph2:
       "My main focus areas are Java, Spring Boot, React, Next.js, TypeScript, databases, Docker and REST APIs. I'm also interested in automation, n8n, the OpenAI API and intelligent systems for real-world use cases.",
     skills: [
@@ -44,7 +44,7 @@ export const en: Dictionary = {
     eyebrow: "Who I Am",
     title: "About Me",
     intro:
-      "I'm Steve Leonel Yomi Mbiakop, a B.Sc. Computer Science graduate (Clausthal University of Technology) currently pursuing a Master's degree at the University of Kassel, with hands-on experience building and operating production fullstack systems: Spring Boot backends, Next.js frontends, PostgreSQL with Flyway, Stripe and RabbitMQ integrations, and Docker/CI-CD pipelines. I combine solid software engineering fundamentals with a research background in program synthesis, and I'm looking for a Software Engineer / Fullstack Developer role from November 2026.",
+      "I'm Steve Leonel Yomi Mbiakop, a B.Sc. Computer Science graduate currently pursuing a Master's degree at Clausthal University of Technology, with hands-on experience building and operating production fullstack systems: Spring Boot backends, Next.js frontends, PostgreSQL with Flyway, Stripe and RabbitMQ integrations, and Docker/CI-CD pipelines. I combine solid software engineering fundamentals with a research background in program synthesis, and I'm looking for a Software Engineer / Fullstack Developer role from November 2026.",
     motivationTitle: "My Motivation",
     motivation1:
       "My goal is to build robust, user-friendly applications that solve real problems. I find it especially exciting to combine classic software development with artificial intelligence, automation and scalable web architecture.",
@@ -55,7 +55,7 @@ export const en: Dictionary = {
     highlights: [
       {
         title: "Computer Science (B.Sc. & M.Sc.)",
-        text: "B.Sc. Computer Science from Clausthal University of Technology, currently pursuing a Master's at the University of Kassel. Focus: software engineering, algorithms, databases and distributed systems.",
+        text: "B.Sc. Computer Science from Clausthal University of Technology, where I'm now pursuing my Master's. Focus: software engineering, algorithms, databases and distributed systems.",
       },
       {
         title: "Fullstack Development",
